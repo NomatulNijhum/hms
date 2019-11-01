@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+
+
+
+
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>
+    @yield('title')
+  </title>
+	<!-- Fav  Icon Link -->
+	<link rel="shortcut icon" type="image/png" href="{{asset('frontend/assets/images/fav.png')}}">
+
+	<!-- Bootstrap core CSS -->
+	<link rel="stylesheet" href="{{asset('frontend/assets/css/bootstrap.min.css')}}">
+	<!-- themify icons CSS -->
+	<link rel="stylesheet" href="{{asset('frontend/assets/css/themify-icons.css')}}">
+	<!-- Animations CSS -->
+	<link rel="stylesheet" href="{{asset('frontend/assets/css/animate.css')}}">
+	<!-- Main CSS -->
+	<link rel="stylesheet" href="{{asset('frontend/assets/css/styles.css')}}">
+	<link rel="stylesheet" href="{{asset('frontend/assets/css/green.css')}}">
+	<link rel="stylesheet" href="{{asset('frontend/assets/css/responsive.css')}}">
+	<!-- morris charts -->
+	<link rel="stylesheet" href="{{asset('frontend/assets/charts/css/morris.css')}}">
+	<!-- jvectormap -->
+	<link rel="stylesheet" href="{{asset('frontend/assets/css/jquery-jvectormap.css')}}">
+
+	<script src="{{asset('frontend/assets/js/modernizr.min.js')}}"></script>
+</head>
+
+
+
+<body>
+	<!-- Pre Loader -->
+
+	<div class="theme-settings" id="switcher">
+		<span class="theme-click">
+			<span class="ti-settings"></span>
+		</span>
+		<span class="theme-color theme-default theme-active" data-color="green"></span>
+		<span class="theme-color theme-blue" data-color="blue"></span>
+		<span class="theme-color theme-red" data-color="red"></span>
+		<span class="theme-color theme-violet" data-color="violet"></span>
+		<span class="theme-color theme-yellow" data-color="yellow"></span>
+	</div>
+	<!-- /Color Changer -->
+	<div class="wrapper">
+		<!-- Page Content -->
+		<div id="content">
+			<!-- Top Navigation -->
+			<div class="container top-brand">
+				<nav class="navbar navbar-default">
+					<div class="navbar-header">
+						<div class="sidebar-header"> <a href="index.html"><img src="{{asset('frontend/assets/images/logo-dark.png')}}"class="logo" alt="logo"></a>
+						</div>
+					</div>
+					<ul class="nav justify-content-end">
+						<li class="nav-item">
+							<a class="nav-link">
+								<span title="Fullscreen" class="ti-fullscreen fullscreen"></span>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" data-toggle="modal" data-target=".mentalcare">
+								<span class="ti-search"></span>
+							</a>
+							<div class="modal fade mentalcare" tabindex="-1" role="dialog" aria-hidden="true">
+								<div class="modal-dialog modal-lorvens">
+									<div class="modal-content proclinic-box-shadow2">
+										<div class="modal-header">
+											<h5 class="modal-title">Search Patient/Doctor:</h5>
+											<span class="ti-close" data-dismiss="modal" aria-label="Close">
+											</span>
+										</div>
+										<div class="modal-body">
+											<form>
+												<div class="form-group">
+													<input type="text" class="form-control" id="search-term" placeholder="Type text here">
+													<button type="button" class="btn btn-lorvens proclinic-bg">
+														<span class="ti-location-arrow"></span> Search</button>
+												</div>
+											</form>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+							 aria-expanded="false">
+								<span class="ti-announcement"></span>
+							</a>
+							<div class="dropdown-menu proclinic-box-shadow2 notifications animated flipInY">
+								<h5>Notifications</h5>
+								<a class="dropdown-item" href="#">
+									<span class="ti-wheelchair"></span> New Patient Added</a>
+								<a class="dropdown-item" href="#">
+									<span class="ti-money"></span> Patient payment done</a>
+								<a class="dropdown-item" href="#">
+									<span class="ti-time"></span>Patient Appointment booked</a>
+								<a class="dropdown-item" href="#">
+									<span class="ti-wheelchair"></span> New Patient Added</a>
+							</div>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+							 aria-expanded="false">
+								<span class="ti-user"></span>
+							</a>
+							<div class="dropdown-menu proclinic-box-shadow2 profile animated flipInY">
+								<h5>Nijhum</h5>
+								<a class="dropdown-item" href="#">
+									<span class="ti-settings"></span> Settings</a>
+								<a class="dropdown-item" href="#">
+									<span class="ti-help-alt"></span> Help</a>
+								<a class="dropdown-item" href="#">
+									<span class="ti-power-off"></span> Logout</a>
+							</div>
+						</li>
+					</ul>
+
+				</nav>
+			</div>
+			<!-- /Top Navigation -->
+			<!-- Menu -->
+			<div class="container menu-nav">
+				<nav class="navbar navbar-expand-lg proclinic-bg text-white">
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+					 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="ti-menu text-white"></span>
+					</button>
+
+					<div class="collapse navbar-collapse" id="navbarSupportedContent">
+						<ul class="navbar-nav mr-auto">
+							<li class="nav-item dropdown active">
+								<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+								 aria-expanded="false"><span class="ti-home"></span> Dashboard</a>
+								<div class="dropdown-menu">
+
+									<a class="dropdown-item" href="index.html">Horizantal</a>
+								</div>
+							</li>
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="" role="button" aria-haspopup="true"
+								 aria-expanded="false"><span class="ti-wheelchair"></span> Patients</a>
+								<div class="dropdown-menu">
+									<a class="dropdown-item" href="patient">Add Patient</a>
+									<a class="dropdown-item" href="allpatient">All Patients</a>
+									<a class="dropdown-item" href="patientdetails">Patient Details</a>
+									<a class="dropdown-item" href="edit-patient.html">Edit Patient</a>
+								</div>
+							</li>
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+								 aria-expanded="false"><span class="ti-user"></span> Doctors</a>
+								<div class="dropdown-menu">
+									<a class="dropdown-item" href="doctor">Add Doctor</a>
+									<a class="dropdown-item" href="doctors.html">All Doctors</a>
+									<a class="dropdown-item" href="about-doctor.html">Doctor Details</a>
+									<a class="dropdown-item" href="edit-doctor.html">Edit Doctor</a>
+								</div>
+							</li>
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+								 aria-expanded="false"><span class="ti-pencil-alt"></span> Appointments</a>
+								<div class="dropdown-menu">
+									<a class="dropdown-item" href="add-appointment.html">Add Appointment</a>
+									<a class="dropdown-item" href="appointments.html">All Appointments</a>
+									<a class="dropdown-item" href="about-appointment.html">Appointment Details</a>
+									<a class="dropdown-item" href="edit-appointment.html">Edit Appointment</a>
+								</div>
+							</li>
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+								 aria-expanded="false"><span class="ti-money"></span> Payments</a>
+								<div class="dropdown-menu">
+									<a class="dropdown-item" href="add-payment.html">Add Payment</a>
+									<a class="dropdown-item" href="payments.html">All Payments</a>
+									<a class="dropdown-item" href="about-payment.html">Payment Invoice</a>
+								</div>
+							</li>
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+								 aria-expanded="false"><span class="ti-key"></span> Room Allotments</a>
+								<div class="dropdown-menu">
+									<a class="dropdown-item" href="add-room.html">Add Room Allotment</a>
+									<a class="dropdown-item" href="rooms.html">All Rooms</a>
+									<a class="dropdown-item" href="edit-room.html">Edit Room Allotment</a>
+								</div>
+							</li>
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+								 aria-expanded="false"><span class="ti-layout-tab"></span> UI Kit</a>
+								<div class="dropdown-menu">
+									<a class="dropdown-item" href="typography.html">Typography</a>
+									<a class="dropdown-item" href="buttons.html">Buttons</a>
+									<a class="dropdown-item" href="cards.html">Cards</a>
+
+								</div>
+							</li>
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+								 aria-expanded="false"><span class="ti-file"></span> Other Pages</a>
+								<div class="dropdown-menu">
+									<a class="dropdown-item" href="login.html">Login </a>
+									<a class="dropdown-item" href="sign-up.html">Sign Up</a>
+
+							</li>
+						</ul>
+					</div>
+				</nav>
+			</div>
+
+
+
+
+
+
+
+
+
+      @yield('content')
+
+
+
+
+
+			<div class="container">
+				<div class="d-sm-flex justify-content-center">
+				  <span class="text-muted text-center d-block d-sm-inline-block">N.J Nijhum,,16103226,Fall 2019 <a href="" target="_blank"></a>. All rights reserved.</span>
+				</div>
+			</div>
+			<!-- /Copy Rights-->
+		</div>
+		<!-- /Page Content -->
+	</div>
+	<!-- Back to Top -->
+	<a id="back-to-top" href="#" class="back-to-top">
+		<span class="ti-angle-up"></span>
+	</a>
+	<!-- /Back to Top -->
+	<!-- Jquery Library-->
+   <script src="{{asset('frontend/assets/js/jquery-3.2.1.min.js')}}"></script>
+	<!-- Popper Library-->
+	<script src="{{asset('frontend/assets/js/popper.min.js')}}"></script>
+	<!-- Bootstrap Library-->
+	<script src="{{asset('frontend/assets/js/bootstrap.min.js')}}"></script>
+	<!-- morris charts -->
+	<script src="{{asset('frontend/assets/charts/js/raphael-min.js')}}"></script>
+	<script src="{{asset('frontend/assets/charts/js/morris.min.js')}}"></script>
+	<script src="{{asset('frontend/assets/js/custom-morris.js')}}"></script>
+
+	<!-- Custom Script-->
+	<script src="{{asset('frontend/assets/js/custom.js')}}"></script>
+</body>
+
+
+
+</html>
