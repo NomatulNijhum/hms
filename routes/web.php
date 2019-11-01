@@ -23,6 +23,10 @@ Route::post('/doctor/create','DoctorController@create')->name('doctor_create');
 
 
 
+
+
+
+
 Route::get('/', function () {
     return view('welcome');
 });
