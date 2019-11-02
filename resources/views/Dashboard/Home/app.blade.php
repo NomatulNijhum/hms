@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html>
 
-
-
-
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 <head>
 	<meta charset="utf-8">
@@ -119,14 +116,18 @@
 									<span class="ti-settings"></span> Settings</a>
 								<a class="dropdown-item" href="#">
 									<span class="ti-help-alt"></span> Help</a>
+									<a class="dropdown-item" href="#">
+										<span class="ti-help-alt"></span>Login</a>
 								<a class="dropdown-item" href="#">
 									<span class="ti-power-off"></span> Logout</a>
+
 							</div>
 						</li>
 					</ul>
 
 				</nav>
 			</div>
+
 			<!-- /Top Navigation -->
 			<!-- Menu -->
 			<div class="container menu-nav">
@@ -142,20 +143,19 @@
 								<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
 								 aria-expanded="false"><span class="ti-home"></span> Dashboard</a>
 								<div class="dropdown-menu">
-
-									<a class="dropdown-item" href="index.html">Horizantal</a>
+									<a class="dropdown-item" href="/dashboard"> Dashboard Index</a>
 								</div>
 							</li>
 							<li class="nav-item dropdown">
-								<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="" role="button" aria-haspopup="true"
-								 aria-expanded="false"><span class="ti-wheelchair"></span> Patients</a>
+								<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+								 aria-expanded="false"><span class="ti-user"></span> Department</a>
 								<div class="dropdown-menu">
-									<a class="dropdown-item" href="patient">Add Patient</a>
-									<a class="dropdown-item" href="allpatient">All Patients</a>
-									<a class="dropdown-item" href="patientdetails">Patient Details</a>
-									<a class="dropdown-item" href="edit-patient.html">Edit Patient</a>
+									<a class="dropdown-item" href="Department">Add Department</a>
+									<a class="dropdown-item" href="doctors.html">All Department</a>
+
 								</div>
 							</li>
+
 							<li class="nav-item dropdown">
 								<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
 								 aria-expanded="false"><span class="ti-user"></span> Doctors</a>
@@ -167,6 +167,30 @@
 								</div>
 							</li>
 							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="" role="button" aria-haspopup="true"
+								 aria-expanded="false"><span class="ti-wheelchair"></span> Patients</a>
+								<div class="dropdown-menu">
+									<a class="dropdown-item" href="patient">Add Patient</a>
+									<a class="dropdown-item" href="allpatient">All Patients</a>
+									<a class="dropdown-item" href="patientdetails">Patient Details</a>
+									<a class="dropdown-item" href="edit-patient.html">Add Document </a>
+									<a class="dropdown-item" href="edit-patient.html">All Document </a>
+
+								</div>
+							</li>
+
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+								 aria-expanded="false"><span class="ti-key"></span> Schedule</a>
+								<div class="dropdown-menu">
+									<a class="dropdown-item" href="add-room.html">Add Schedule</a>
+									<a class="dropdown-item" href="rooms.html">All Schedules  </a>
+
+								</div>
+							</li>
+
+
+							<li class="nav-item dropdown">
 								<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
 								 aria-expanded="false"><span class="ti-pencil-alt"></span> Appointments</a>
 								<div class="dropdown-menu">
@@ -176,6 +200,27 @@
 									<a class="dropdown-item" href="edit-appointment.html">Edit Appointment</a>
 								</div>
 							</li>
+
+
+							<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+						 aria-expanded="false"><span class="ti-pencil-alt"></span> Prescription</a>
+															<div class="dropdown-menu">
+																<a class="dropdown-item" href="add-appointment.html">Add Patient Case Study</a>
+																<a class="dropdown-item" href="appointments.html">All Patients Case Study</a>
+																<a class="dropdown-item" href="about-appointment.html">Add Prescription</a>
+															</div>
+														</li>
+
+														<li class="nav-item dropdown">
+															<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+															 aria-expanded="false"><span class="ti-key"></span> Room Allotments</a>
+															<div class="dropdown-menu">
+																<a class="dropdown-item" href="add-room.html">Add Room Allotment</a>
+																<a class="dropdown-item" href="rooms.html">All Rooms</a>
+																<a class="dropdown-item" href="edit-room.html">Edit Room Allotment</a>
+															</div>
+														</li>
 							<li class="nav-item dropdown">
 								<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
 								 aria-expanded="false"><span class="ti-money"></span> Payments</a>
@@ -187,36 +232,42 @@
 							</li>
 							<li class="nav-item dropdown">
 								<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
-								 aria-expanded="false"><span class="ti-key"></span> Room Allotments</a>
+								 aria-expanded="false"><span class="ti-user"></span>Human Resources</a>
 								<div class="dropdown-menu">
-									<a class="dropdown-item" href="add-room.html">Add Room Allotment</a>
-									<a class="dropdown-item" href="rooms.html">All Rooms</a>
-									<a class="dropdown-item" href="edit-room.html">Edit Room Allotment</a>
+									<a class="dropdown-item" href="doctor">Add Employee</a>
+									<a class="dropdown-item" href="doctors.html">All Accountants</a>
+									<a class="dropdown-item" href="about-doctor.html">All Laboratories</a>
+									<a class="dropdown-item" href="edit-doctor.html">All Nurses</a>
+									<a class="dropdown-item" href="edit-doctor.html">All Pharmacists</a>
+									<a class="dropdown-item" href="edit-doctor.html">All Receptionists</a>
+
+									<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+											 aria-expanded="false"><span class="ti-pencil-alt"></span> Activities</a>
+																	<div class="dropdown-menu">
+																		<a class="dropdown-item" href="Birthreport">Add Birth Report</a>
+																		<a class="dropdown-item" href="appointments.html">All Birth Reports</a>
+																		<a class="dropdown-item" href="Deathreport">Add Dealth Report</a>
+																		<a class="dropdown-item" href="appointments.html">All Dealth Reports </a>
+																		<a class="dropdown-item" href="Operation">Add Operation  Reports</a>
+																		<a class="dropdown-item" href="Investigation">Add Investigation Report<</a>
+																		<a class="dropdown-item" href="about-appointment.html">All Investigation Reports</a>
+
+																		<a class="dropdown-item" href="addmedicine">Add Medicine </a>
+																		<a class="dropdown-item" href="about-appointment.html">All Medicines</a>	</div>
+
+
+																</li>
+										</li>
 								</div>
 							</li>
-							<li class="nav-item dropdown">
-								<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
-								 aria-expanded="false"><span class="ti-layout-tab"></span> UI Kit</a>
-								<div class="dropdown-menu">
-									<a class="dropdown-item" href="typography.html">Typography</a>
-									<a class="dropdown-item" href="buttons.html">Buttons</a>
-									<a class="dropdown-item" href="cards.html">Cards</a>
-
 								</div>
 							</li>
-							<li class="nav-item dropdown">
-								<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
-								 aria-expanded="false"><span class="ti-file"></span> Other Pages</a>
-								<div class="dropdown-menu">
-									<a class="dropdown-item" href="login.html">Login </a>
-									<a class="dropdown-item" href="sign-up.html">Sign Up</a>
 
-							</li>
 						</ul>
 					</div>
 				</nav>
 			</div>
-
 
 
 

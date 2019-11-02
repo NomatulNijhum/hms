@@ -14,16 +14,30 @@ Route::post('/patient/create','PatientController@create')->name('patient_create'
 Route::get('/allpatient','PatientController@allpatient')->name('allpatient');
 Route::get('/patientdetails','PatientController@patientdetails')->name('patientdetails');
 
-
+//Doctor
 Route::get('/doctor','DoctorController@index')->name('doctor');
 Route::post('/doctor/create','DoctorController@create')->name('doctor_create');
 
+//Birthreport
+Route::get('/Birthreport','BirthreportController@index')->name('Birthreport');
+//Deathreport
+Route::get('/Deathreport','DeathreportController@index')->name('Deathreport');
 
 
+//Operation Report
 
+Route::get('/Operation','OperationreportController@index')->name('Operationreport');
 
+//investigationReport
 
+Route::get('/Investigation','InvestigationController@index')->name('Investigation');
 
+//addmedicine
+
+Route::get('/addmedicine','MedicineController@index')->name('addmedicine');
+
+//
+Route::get('/Department','DepartmentController@index')->name('Department');
 
 
 
