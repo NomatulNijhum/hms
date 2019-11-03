@@ -39,6 +39,10 @@ Route::get('/addmedicine','MedicineController@index')->name('addmedicine');
 //
 Route::get('/Department','DepartmentController@index')->name('Department');
 
+//addnotice
+
+Route::get('/Notice','NoticeController@index')->name('Notice');
+
 
 
 Route::get('/', function () {
