@@ -37,7 +37,7 @@ patient
         <div class="col-md-12">
           <div class="widget-area-2 proclinic-box-shadow">
             <h3 class="widget-title">Add Patient</h3>
-            
+
             <form id="patientcreate" action="{{route ('patient_create')}}" method="post" enctype="multipart/form-data">
               @csrf
               <div class="form-row">

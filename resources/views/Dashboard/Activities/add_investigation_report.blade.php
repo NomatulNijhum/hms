@@ -38,10 +38,12 @@ Add investigation Report
           <div class="widget-area-2 proclinic-box-shadow">
             <h3 class="widget-title">Add Investigation  Report</h3>
 
+            <form id="Investigation_create" action="{{route ('Investigation_create')}}" method="post" enctype="multipart/form-data">
+              @csrf
 
               <div class="form-row">
                 <div class="form-group col-md-6">
-                  <label for="patient-name">Patient ID</label>
+                  <label for="patient_id">Patient ID</label>
                   <input type="text" name="patient_id" class="form-control" placeholder="patient_id" id="patient_id">
                 </div>
                 <div class="form-group col-md-6">
@@ -63,9 +65,10 @@ Add investigation Report
 
 
                 <div class="form-group col-md-12">
-                  <label for="picture">Picture </label>
-                  <input type="picture" name="picture" class="form-control" id="picture">
+                  <label for="file">File</label>
+                  <input type="file" name="file" class="form-control" id="file">
                 </div>
+
                 <div class="form-group col-md-6 mb-3">
                   <button type="submit" class="btn btn-primary btn-lg">Submit</button>
                 </div>

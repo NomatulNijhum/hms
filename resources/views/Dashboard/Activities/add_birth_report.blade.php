@@ -38,10 +38,11 @@ Add Birth Report
           <div class="widget-area-2 proclinic-box-shadow">
             <h3 class="widget-title">Add Birth Report</h3>
 
-
+            <form id="Birthreport_create" action="{{route ('Birthreport_create')}}" method="post" enctype="multipart/form-data">
+              @csrf
               <div class="form-row">
                 <div class="form-group col-md-6">
-                  <label for="patient-name">Patient ID</label>
+                  <label for="patient_id">Patient ID</label>
                   <input type="text" name="patient_id" class="form-control" placeholder="patient_id" id="patient_id">
                 </div>
                 <div class="form-group col-md-6">
@@ -49,7 +50,7 @@ Add Birth Report
                   <input type="date" name="date" placeholder="date" class="form-control" id="dob">
                 </div>
                 <div class="form-group col-md-6">
-                  <label for="age">Title</label>
+                  <label for="title">Title</label>
                   <input type="text" name="title" placeholder="title" class="form-control" id="title">
                 </div>
                 <div class="form-group col-md-6">

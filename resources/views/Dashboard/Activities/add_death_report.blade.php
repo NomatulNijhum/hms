@@ -37,11 +37,12 @@ Add Death Report
         <div class="col-md-12">
           <div class="widget-area-2 proclinic-box-shadow">
             <h3 class="widget-title">Add Death  Report</h3>
-
+            <form id="Deathreport_create" action="{{route ('Deathreport_create')}}" method="post" enctype="multipart/form-data">
+              @csrf
 
               <div class="form-row">
                 <div class="form-group col-md-6">
-                  <label for="patient-name">Patient ID</label>
+                  <label for="patient_id">Patient ID</label>
                   <input type="text" name="patient_id" class="form-control" placeholder="patient_id" id="patient_id">
                 </div>
                 <div class="form-group col-md-6">
@@ -49,7 +50,7 @@ Add Death Report
                   <input type="date" name="date" placeholder="date" class="form-control" id="dob">
                 </div>
                 <div class="form-group col-md-6">
-                  <label for="age">Title</label>
+                  <label for="title">Title</label>
                   <input type="text" name="title" placeholder="title" class="form-control" id="title">
                 </div>
                 <div class="form-group col-md-6">

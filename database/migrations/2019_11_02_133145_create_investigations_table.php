@@ -15,7 +15,13 @@ class CreateInvestigationsTable extends Migration
     {
         Schema::create('investigations', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->timestamps();
+            $table->string('patient_id');
+            $table->date('date');
+            $table->string('title');
+            $table->string('description');
+            $table->string('doctor_name');
+            $table->string('file');
+           $table->timestamps();
         });
     }
 

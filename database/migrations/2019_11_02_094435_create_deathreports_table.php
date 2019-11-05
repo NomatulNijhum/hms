@@ -15,7 +15,15 @@ class CreateDeathreportsTable extends Migration
     {
         Schema::create('deathreports', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->timestamps();
+            $table->string('patient_id');
+            $table->date('date');
+            $table->string('title');
+            $table->string('description');
+            $table->string('doctor_name');
+           $table->timestamps();
+
+
+
         });
     }
 

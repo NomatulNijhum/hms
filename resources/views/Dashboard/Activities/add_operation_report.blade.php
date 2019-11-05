@@ -37,11 +37,12 @@ Add Operation Report
         <div class="col-md-12">
           <div class="widget-area-2 proclinic-box-shadow">
             <h3 class="widget-title">Add Operation  Report</h3>
-
+            <form id="Operationreport_create" action="{{route ('Operationreport_create')}}" method="post" enctype="multipart/form-data">
+              @csrf
 
               <div class="form-row">
                 <div class="form-group col-md-6">
-                  <label for="patient-name">Patient ID</label>
+                  <label for="patient_id">Patient ID</label>
                   <input type="text" name="patient_id" class="form-control" placeholder="patient_id" id="patient_id">
                 </div>
                 <div class="form-group col-md-6">

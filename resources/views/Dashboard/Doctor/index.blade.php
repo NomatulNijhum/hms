@@ -40,20 +40,23 @@ doctor
 						<div class="widget-area-2 proclinic-box-shadow">
 							<h3 class="widget-title">Add Doctor</h3>
 
-                <form id="doctor_create" action="{{route ('doctor_create')}}" method="post" enctype="multipart/form-data">
+                <form id="doctorcreate" action="{{route ('doctor_create')}}" method="post" enctype="multipart/form-data">
                   @csrf
+
+
 								<div class="form-row">
 									<div class="form-group col-md-6">
 										<label for="Doctor-name">Doctor Name</label>
 										<input type="text" class="form-control" name="doctor_name" placeholder="Doctor name" id="Doctor-name">
 									</div>
 									<div class="form-group col-md-6">
-										<label for="dob">Date Of Birth</label>
-										<input type="date" name="date_of_birth" placeholder="Date of Birth"  class="form-control" id="dob">
+										<label for="date_of_birth">Date Of Birth</label>
+										<input type="date" name="date_of_birth" placeholder="Date of Birth"  class="form-control" id="date_of_birth">
                                     </div>
+																		
                                     <div class="form-group col-md-6">
-										<label for="specialization">Specialization</label>
-										<input type="text" name="specialization" placeholder="Specialization" class="form-control" id="specialization">
+										<label for="department_name">Department Name</label>
+										<input type="text" name="department_name" placeholder="department_name" class="form-control" id="department_name">
 									</div>
 									<div class="form-group col-md-6">
 										<label for="experience">Experience</label>
@@ -88,8 +91,8 @@ doctor
 										<textarea placeholder="Address" name="address"class="form-control" id="address" rows="3"></textarea>
 									</div>
 									<div class="form-group col-md-12">
-										<label for="file">File</label>
-										<input type="file" name="file"class="form-control" id="file">
+										<label for="picture">Picture</label>
+										<input type="file" name="picture"class="form-control" id="picture">
 									</div>
 
 

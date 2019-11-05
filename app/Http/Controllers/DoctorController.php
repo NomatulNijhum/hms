@@ -4,7 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\doctor;
+use Carbon\Carbon;
+use App\Doctor;
 class DoctorController extends Controller
 {
 
@@ -15,10 +16,10 @@ function index()
 
             function create(Request $request)
             {
-            doctor::insert([
+            Doctor::insert([
                 'doctor_name'=>$request->doctor_name,
                 'date_of_birth'=>$request->date_of_birth,
-                'specialization'=>$request->specialization,
+                'department_name'=>$request->department_name,
                 'experience'=>$request->experience,
                 'age'=>$request->age,
                 'phone'=>$request->phone,
@@ -26,8 +27,8 @@ function index()
                 'gender'=>$request->gender,
                 'doctor_details'=>$request->doctor_details,
                 'address'=>$request->address,
-                'file'=>$request->file,
-
+                'picture'=>$request->picture,
+                'created_at' => Carbon::now(),
 
 
               ]);

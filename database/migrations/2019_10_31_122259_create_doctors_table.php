@@ -17,7 +17,7 @@ class CreateDoctorsTable extends Migration
     $table->bigIncrements('id');
    $table->string('doctor_name');
    $table->date('date_of_birth');
-   $table->string('specialization');
+   $table->string('department_name');
    $table->string('experience');
    $table->string('age');
    $table->string('phone');
@@ -25,9 +25,9 @@ class CreateDoctorsTable extends Migration
    $table->string('gender');
    $table->longText('doctor_details');
    $table->longText('address');
-   $table->string('file');
+   $table->string('picture');
    $table->timestamps();
-        
+
         });
     }
 

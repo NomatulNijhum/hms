@@ -38,6 +38,8 @@ Add Medicine
         <div class="col-md-12">
           <div class="widget-area-2 proclinic-box-shadow">
             <h3 class="widget-title">Add Medicine</h3>
+            <form id="addmedicine_create" action="{{route ('addmedicine_create')}}" method="post" enctype="multipart/form-data">
+              @csrf
 
 
               <div class="form-row">
@@ -45,7 +47,7 @@ Add Medicine
                   <label for="medicine_name">Medicine Name</label>
                   <input type="text" name="medicine_name" class="form-control" placeholder="medicine_name" id="medicine_name">
                 </div>
-              
+
                 <div class="form-group col-md-6">
                   <label for="category_name">Category Name</label>
                   <select class="form-control" name="category_name" id="category_name">

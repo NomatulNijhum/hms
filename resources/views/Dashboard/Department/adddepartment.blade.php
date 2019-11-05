@@ -38,12 +38,16 @@ Department
           <div class="widget-area-2 proclinic-box-shadow">
             <h3 class="widget-title">Add Department </h3>
 
+            <form id="Department_create" action="{{route ('Department_create')}}" method="post" enctype="multipart/form-data">
+              @csrf
 
               <div class="form-row">
                 <div class="form-group col-md-6">
-                  <label for="department-name">Department Name</label>
-                  <input type="text" name="department-name" class="form-control" placeholder="department-name" id="department-name">
+                  <label for="department_name">Department Name</label>
+                  <input type="text" name="department_name" class="form-control" placeholder="department_name" id="department_name">
                 </div>
+
+
                 <div class="form-group col-md-6">
                   <label for="description">Description</label>
                   <input type="text" name="description" placeholder="description" class="form-control" id="description">

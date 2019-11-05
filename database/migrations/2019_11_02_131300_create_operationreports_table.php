@@ -14,8 +14,14 @@ class CreateOperationreportsTable extends Migration
     public function up()
     {
         Schema::create('operationreports', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->timestamps();
+                        $table->bigIncrements('id');
+
+                        $table->string('patient_id');
+                        $table->date('date');
+                        $table->string('title');
+                        $table->string('description');
+                        $table->string('doctor_name');
+                        $table->timestamps();
         });
     }
 

@@ -41,7 +41,7 @@ Add Notice
 
 
                 <div class="form-group col-md-6">
-                  <label for="age">Title</label>
+                  <label for="title">Title</label>
                   <input type="text" name="title" placeholder="title" class="form-control" id="title">
                 </div>
                 <div class="form-group col-md-6">
@@ -49,10 +49,13 @@ Add Notice
                   <input type="text" name="description" placeholder="description" class="form-control" id="description">
                 </div>
                 <div class="form-group col-md-6">
-                  <label for="doctor_name">Date</label>
-                  <input type="date" name="doctor_name" placeholder="doctor_name" class="form-control" id="doctor_name">
+                  <label for="start_date">Start Date</label>
+                  <input type="date" name="start_date" placeholder="start_date" class="form-control" id="start_date">
                 </div>
-
+                <div class="form-group col-md-6">
+                  <label for="end_date">End Date</label>
+                  <input type="date" name="end_date" placeholder="end_date" class="form-control" id="end_date">
+                </div>
 
 
                 <div class="form-group col-md-6 mb-3">
