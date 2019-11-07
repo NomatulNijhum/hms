@@ -17,6 +17,7 @@ Route::get('/patientdetails','PatientController@patientdetails')->name('patientd
 //Doctor
 Route::get('/doctor','DoctorController@index')->name('doctor');
 Route::post('/doctor/create','DoctorController@create')->name('doctor_create');
+Route::get('/alldoctor','DoctorController@alldoctor')->name('alldoctor');
 
 //Birthreport
 Route::get('/Birthreport','BirthreportController@index')->name('Birthreport');
@@ -27,7 +28,7 @@ Route::get('/Deathreport','DeathreportController@index')->name('Deathreport');
 Route::post('/Deathreport/create','DeathreportController@create')->name('Deathreport_create');
 
 //Operation Report
- 
+
 Route::get('/Operation','OperationreportController@index')->name('Operationreport');
 Route::post('/Operation/create','OperationreportController@create')->name('Operationreport_create');
 //investigationReport

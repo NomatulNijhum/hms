@@ -34,6 +34,14 @@ function index()
               ]);
             }
 
+            function alldoctor()
+            {
+
+               $doctors = doctor::all();
+               // echo $users;
+             return view('Dashboard.Doctor.alldoctor',compact('doctors'));
+            }
+
 
 
 

@@ -1,0 +1,127 @@
+@extends('Dashboard.Home.app')
+
+@section('title')
+alldoctor
+@endsection
+
+@section('content')
+
+<!-- /Menu -->
+				<!-- Breadcrumb -->
+				<!-- Page Title -->
+				<div class="container mt-0">
+					<div class="row breadcrumb-bar">
+						<div class="col-md-6">
+							<h3 class="block-title">Doctor</h3>
+						</div>
+						<div class="col-md-6">
+							<ol class="breadcrumb">
+								<li class="breadcrumb-item">
+									<a href="index.html">
+										<span class="ti-home"></span>
+									</a>
+								</li>
+								<li class="breadcrumb-item">Doctors</li>
+								<li class="breadcrumb-item active">All Doctors</li>
+							</ol>
+						</div>
+					</div>
+				</div>
+			<!-- /Page Title -->
+
+			<!-- /Breadcrumb -->
+			<!-- Main Content -->
+			<div class="container">
+
+				<div class="row">
+					<!-- Widget Item -->
+					<div class="col-md-12">
+						<div class="widget-area-2 proclinic-box-shadow">
+							<h3 class="widget-title">Doctors List</h3>
+							<div class="table-responsive mb-3">
+								<table id="tableId" class="table table-bordered table-striped">
+									<thead>
+										<tr>
+											<th class="no-sort">
+												<div class="custom-control custom-checkbox">
+													<input class="custom-control-input" type="checkbox" id="select-all">
+													<label class="custom-control-label" for="select-all"></label>
+												</div>
+											</th>
+                      <div class="container">
+                        <div class="row">
+                          <div class="col-md-6 offset-md-3">
+                            <table class="table">
+                            <thead>
+                              <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Doctor Name</th>
+                                <th scope="col">Date Of Birth</th>
+                                <th scope="col">Department Name</th>
+                                <th scope="col">Experience</th>
+                                <th scope="col">Phone</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">Gender</th>
+                                <th scope="col">Doctor Details</th>
+                                <th scope="col">Address</th>
+                                    <th scope="col">Picture</th>
+                                      <th scope="col">Doctor Details</th>
+
+                              </tr>
+                            </thead>
+                            <tbody>
+
+                              @foreach($doctors as $doctor)
+                              <tr>
+                                <th scope="row">{{ $doctor->id }}</th>
+                                <td>{{ $doctor->doctor_name}}</td>
+                                <td>{{ $doctor->date_of_birth }}</td>
+                                <td>{{ $doctor->department_name }}</td>
+                                <td>{{ $doctor->experience}}</td>
+                                <td>{{ $doctor->age }}</td>
+                                <td>{{ $doctor->phone }}</td>
+                                <td>{{ $doctor->email }}</td>
+                                <td>{{ $doctor->gender }}</td>
+                                <td>{{ $doctor->doctor_details }}</td>
+                                <td>{{ $doctor->address }}</td>
+                                <td>{{ $doctor->picture}}</td>
+
+
+
+                              </tr>
+                          @endforeach
+                            </tbody>
+                            </table>
+
+                          </div>
+
+                        </div>
+
+                      </div>
+								<!--Export links-->
+								<nav aria-label="Page navigation example">
+									<ul class="pagination justify-content-center export-pagination">
+										<li class="page-item">
+											<a class="page-link" href="#"><span class="ti-download"></span> csv</a>
+										</li>
+										<li class="page-item">
+											<a class="page-link" href="#"><span class="ti-printer"></span>  print</a>
+										</li>
+										<li class="page-item">
+											<a class="page-link" href="#"><span class="ti-file"></span> PDF</a>
+										</li>
+										<li class="page-item">
+											<a class="page-link" href="#"><span class="ti-align-justify"></span> Excel</a>
+										</li>
+									</ul>
+								</nav>
+								<!-- /Export links-->
+								<button type="button" class="btn btn-danger mt-3 mb-0"><span class="ti-trash"></span> DELETE</button>
+								<button type="button" class="btn btn-primary mt-3 mb-0"><span class="ti-pencil-alt"></span> EDIT</button>
+							</div>
+						</div>
+					</div>
+					<!-- /Widget Item -->
+				</div>
+			</div>
+@endsection

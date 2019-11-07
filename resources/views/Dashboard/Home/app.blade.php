@@ -161,7 +161,7 @@
 								 aria-expanded="false"><span class="ti-user"></span> Doctors</a>
 								<div class="dropdown-menu">
 									<a class="dropdown-item" href="doctor">Add Doctor</a>
-									<a class="dropdown-item" href="doctors.html">All Doctors</a>
+									<a class="dropdown-item" href="alldoctor">All Doctors</a>
 									<a class="dropdown-item" href="about-doctor.html">Doctor Details</a>
 									<a class="dropdown-item" href="edit-doctor.html">Edit Doctor</a>
 								</div>
@@ -253,7 +253,7 @@
 																		<a class="dropdown-item" href="Investigation">Add Investigation Report<</a>
 																		<a class="dropdown-item" href="about-appointment.html">All Investigation Reports</a>
 
-																		<a class="dropdown-item" href="addmedicine">Add Medicine </a>
+									                  <a class="dropdown-item" href="addmedicine">Add Medicine </a>
 																		<a class="dropdown-item" href="about-appointment.html">All Medicines</a>	</div>
 
 
