@@ -30,5 +30,14 @@ class InvestigationController extends Controller
                 ]);
               }
 
+              function allinvestigation()
+              {
+
+                 $investigations = Investigation::all();
+                 // echo $users;
+               return view('Dashboard.Activities.all_investigation_report',compact('investigations'));
+              }
+
+
 
 }

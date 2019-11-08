@@ -26,4 +26,13 @@ class BirthreportController extends Controller
 
             ]);
           }
+          function allbirthreport()
+          {
+
+             $birthreports = Birthreport::all();
+             // echo $users;
+           return view('Dashboard.Activities.all_birth_report',compact('birthreports'));
+          }
+
+
 }

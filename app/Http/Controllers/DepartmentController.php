@@ -25,4 +25,12 @@ class DepartmentController extends Controller
 
           ]);
         }
+
+        function alldepartment()
+        {
+
+           $departments = Department::all();
+           // echo $users;
+         return view('Dashboard.Department.alldepartment',compact('departments'));
+        }
 }

@@ -1,4 +1,4 @@
-@extends('Dashboard.Home.app')
+ @extends('Dashboard.Home.app')
 
 @section('title')
 Add investigation Report

@@ -23,11 +23,18 @@ class MedicineController extends Controller
                     'description'=>$request->description,
                     'price'=>$request->price,
                     'manufactured_by'=>$request->manufactured_by,
-                    
+
                     'created_at' => Carbon::now(),
 
 
                   ]);
+                }
+                function allmedicine()
+                {
+
+                   $medicines =  Medicine::all();
+                   // echo $users;
+                 return view('Dashboard.Activities.all_medicine',compact('medicines'));
                 }
 
 

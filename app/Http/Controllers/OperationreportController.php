@@ -27,5 +27,13 @@ class OperationreportController extends Controller
 
               ]);
             }
+            function alloperationreport()
+            {
+
+               $operationreports = Operationreport::all();
+               // echo $users;
+             return view('Dashboard.Activities.all_operation_report',compact('operationreports'));
+            }
+
 
 }

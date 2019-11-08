@@ -151,7 +151,7 @@
 								 aria-expanded="false"><span class="ti-user"></span> Department</a>
 								<div class="dropdown-menu">
 									<a class="dropdown-item" href="Department">Add Department</a>
-									<a class="dropdown-item" href="doctors.html">All Department</a>
+									<a class="dropdown-item" href="alldepartment">All Department</a>
 
 								</div>
 							</li>
@@ -183,7 +183,7 @@
 								<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
 								 aria-expanded="false"><span class="ti-key"></span> Schedule</a>
 								<div class="dropdown-menu">
-									<a class="dropdown-item" href="add-room.html">Add Schedule</a>
+									<a class="dropdown-item" href="schedule">Add Schedule</a>
 									<a class="dropdown-item" href="rooms.html">All Schedules  </a>
 
 								</div>
@@ -246,15 +246,16 @@
 											 aria-expanded="false"><span class="ti-pencil-alt"></span> Activities</a>
 																	<div class="dropdown-menu">
 																		<a class="dropdown-item" href="Birthreport">Add Birth Report</a>
-																		<a class="dropdown-item" href="appointments.html">All Birth Reports</a>
+																		<a class="dropdown-item" href="allBirthreport">All Birth Reports</a>
 																		<a class="dropdown-item" href="Deathreport">Add Dealth Report</a>
-																		<a class="dropdown-item" href="appointments.html">All Dealth Reports </a>
+																		<a class="dropdown-item" href="allDeathreports">All Dealth Reports </a>
 																		<a class="dropdown-item" href="Operation">Add Operation  Reports</a>
+																				<a class="dropdown-item" href="alloperationreport">All Operation  Reports </a>
 																		<a class="dropdown-item" href="Investigation">Add Investigation Report<</a>
-																		<a class="dropdown-item" href="about-appointment.html">All Investigation Reports</a>
+																		<a class="dropdown-item" href="allinvestigation">All Investigation Reports</a>
 
 									                  <a class="dropdown-item" href="addmedicine">Add Medicine </a>
-																		<a class="dropdown-item" href="about-appointment.html">All Medicines</a>	</div>
+																		<a class="dropdown-item" href="allmedicine">All Medicines</a>	</div>
 
 
 																</li>

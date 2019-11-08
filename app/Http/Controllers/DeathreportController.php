@@ -26,6 +26,13 @@ class DeathreportController extends Controller
 
     ]);
   }
+  function alldeathreport()
+  {
+
+     $deathreports = Deathreport::all();
+     // echo $users;
+   return view('Dashboard.Activities.all_death_report',compact('deathreports'));
+  }
 
 
 }
