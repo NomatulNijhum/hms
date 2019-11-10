@@ -18,6 +18,15 @@ Route::get('/patientdetails','PatientController@patientdetails')->name('patientd
 Route::get('/doctor','DoctorController@index')->name('doctor');
 Route::post('/doctor/create','DoctorController@create')->name('doctor_create');
 Route::get('/alldoctor','DoctorController@alldoctor')->name('alldoctor');
+
+//Appointment
+
+Route::get('/appointment','AppointmentController@index')->name('appointment');
+Route::post('/appointment/create','AppointmentController@create')->name('appointment_create');
+
+
+
+
 //Schedules
 
 Route::get('/schedule','ScheduleController@index')->name('schedule');

@@ -194,7 +194,7 @@
 								<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
 								 aria-expanded="false"><span class="ti-pencil-alt"></span> Appointments</a>
 								<div class="dropdown-menu">
-									<a class="dropdown-item" href="add-appointment.html">Add Appointment</a>
+									<a class="dropdown-item" href="appointment">Add Appointment</a>
 									<a class="dropdown-item" href="appointments.html">All Appointments</a>
 									<a class="dropdown-item" href="about-appointment.html">Appointment Details</a>
 									<a class="dropdown-item" href="edit-appointment.html">Edit Appointment</a>
