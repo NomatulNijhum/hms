@@ -2,10 +2,10 @@
 
 //USER_Login
 Route::get('/users','UserController@index')->name('index');
-
+Route::get('/bloodbank','BloodbankController@index')->name('index');
 
 ////Dashboardhome
-Route::get('/dashboard','DashboardhomeController@index')->name('index');
+Route::get('/dashboard','BloodbankController@index')->name('index');
 
 
 //Patients
