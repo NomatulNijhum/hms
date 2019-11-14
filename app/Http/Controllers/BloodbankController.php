@@ -12,4 +12,11 @@ class BloodbankController extends Controller
     return view ('BloodBank.bloodindex');
     }
 
+
+    function about()
+    {
+
+      return view ('BloodBank.about');
+      }
+
 }

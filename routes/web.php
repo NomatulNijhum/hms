@@ -3,6 +3,25 @@
 //USER_Login
 Route::get('/users','UserController@index')->name('index');
 Route::get('/bloodbank','BloodbankController@index')->name('index');
+Route::get('/bloodbank/about','BloodbankController@about')->name('about');
+Route::get('/bloodbank/userregistration','TblUserController@index')->name('index');
+Route::post('/bloodbank/userregistration/create','TblUserController@create')->name('userregistration_create');
+
+
+//
+//
+
+
+
+
+
+
+
+
+
+
+
+
 
 ////Dashboardhome
 Route::get('/dashboard','BloodbankController@index')->name('index');
