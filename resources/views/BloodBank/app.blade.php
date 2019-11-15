@@ -23,11 +23,11 @@
             <div
                 class="collapse navbar-collapse" id="navcol-1">
                 <ul class="nav navbar-nav ml-auto main-menu">
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="{{url('/')}}">Home</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="{{url('/donar-view')}}">Donar</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="{{url('/bloodbank/about')}}">about us</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="{{url('/community')}}">Community</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="{{url('/bloodbank/userregistration')}}">registration</a></li>
+                  <li class="nav-item" role="presentation"><a class="nav-link" href="{{url('/')}}">Home</a></li>
+                <li class="nav-item" role="presentation"><a class="nav-link" href="{{url('/donar-view')}}">Donar</a></li>
+                <li class="nav-item" role="presentation"><a class="nav-link" href="{{url('/about-us')}}">about us</a></li>
+                <li class="nav-item" role="presentation"><a class="nav-link" href="{{url('/community')}}">Community</a></li>
+                <li class="nav-item" role="presentation"><a class="nav-link" href="{{url('/registration-form')}}">registration</a></li>
                    <?php
                       $userid=Session::get('user_id');
                       $admin_id=Session::get('admin_id');

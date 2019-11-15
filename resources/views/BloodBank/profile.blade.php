@@ -122,11 +122,11 @@
                                             <label>Your Post</label>
                                          </div>
                                          <?php
-                                            $post_info=DB::table('tbl_post')
-                                                  ->join('tbl_user','tbl_post.user_id','=','tbl_user.user_id')
-                                                  ->select('tbl_user.user_name','tbl_post.*')
-                                                  ->where('tbl_user.user_id',Session::get('user_id'))
-                                                  ->orderby('tbl_post.post_id','ASC')
+                                            $post_info=DB::table('tbl_posts')
+                                                  ->join('tbl_users','tbl_posts.user_id','=','tbl_users.user_id')
+                                                  ->select('tbl_users.user_name','tbl_posts.*')
+                                                  ->where('tbl_users.user_id',Session::get('user_id'))
+                                                  ->orderby('tbl_posts.post_id','ASC')
                                                   ->get();
                                             foreach ($post_info as $p_info) {
                                              ?>

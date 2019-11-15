@@ -7,8 +7,11 @@
                 <h2 class="text-info">Registration</h2>
                 <p>Registration form for user. User can also register as donar(optional).</p>
             </div>
-            <form id="userregistrationcreate" action="{{route ('userregistration_create')}}" method="post" enctype="multipart/form-data">
-              @csrf
+            <form action="/save-user" method="post">
+
+              
+              {{csrf_field()}}
+
                 <div class="form-group">
                     <label>Name</label><input class="form-control" type="text" name="un">
                 </div>

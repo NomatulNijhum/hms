@@ -16,6 +16,11 @@ function index()
 
             function create(Request $request)
             {
+              $min=Carbon::now()->subYears(18);
+
+              $request->validate([
+                'date_of_birth' => "required|before:$min"
+              ]);
             Doctor::insert([
                 'doctor_name'=>$request->doctor_name,
                 'date_of_birth'=>$request->date_of_birth,

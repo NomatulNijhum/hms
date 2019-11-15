@@ -1,30 +1,71 @@
 <?php
 
+
+
+
+
+
 //USER_Login
-Route::get('/users','UserController@index')->name('index');
-Route::get('/bloodbank','BloodbankController@index')->name('index');
-Route::get('/bloodbank/about','BloodbankController@about')->name('about');
-Route::get('/bloodbank/userregistration','TblUserController@index')->name('index');
-Route::post('/bloodbank/userregistration/create','TblUserController@create')->name('userregistration_create');
+Route::get('/users','UserController@abc')->name('abc');
+
+
+
 
 
 //
-//
+Route::post('/save-user', 'TblUserController@index');
+Route::post('/user-login', 'TblUserController@login_user');
+Route::get('/user-profile', 'TblUserController@user_profile');
+Route::get('/logout', 'TblUserController@user_logout');
+Route::get('/edit-profile/{user_id}', 'TblUserController@edit_profile');
+Route::get('/change-profile', 'TblUserController@user_change');
+Route::post('/update-profile/{user_id}', 'TblUserController@update_profile');
+Route::post('/change-designation/{user_id}', 'TblUserController@change_designation');
+
+///bloodbank
+//Route::get('/bloodbank/about','BloodbankController@about')->name('about');
+//Route::get('/bloodbank/userregistration','TblUserController@index')->name('index');
+//Route::post('/bloodbank/userregistration/create','TblUserController@create')->name('userregistration_create');
+
+//publiccontroller
+
+Route::get('/bloodbank', 'TblAdminController@home');
+Route::get('/login-user', 'TblAdminController@login_user');
+Route::get('/donar-view', 'TblAdminController@donar');
+Route::get('/registration-form', 'TblAdminController@registration');
+Route::get('/about-us', 'TblAdminController@about');
+Route::get('/community', 'TblAdminController@community_page');
+Route::get('/details', 'TblAdminController@details_page');
+
+
+
+//Post related routing-------------------------------
+Route::post('/create-post/{user_id}', 'TblPostController@index');
+Route::post('/post-create/{user_id}', 'TblPostController@post_create');
+
+//Admin related routing-----------------------------------
+Route::get('/login-admin', 'TblPostController@login_page');
+Route::post('/admin-panel', 'TblPostController@login_admin');
+Route::get('/admin-profile', 'TblPostController@admin_profile');
+Route::get('/profile-edit/{admin_id}', 'TblPostController@edit_profile');
+Route::get('/admin-change-profile', 'TblPostController@admin_change');
+Route::post('/profile-update/{admin_id}', 'TblPostController@profile_update');
+Route::get('/all-donar', 'TblPostController@all_donar');
+Route::get('/all-user', 'TblPostController@all_user');
+Route::get('/ban-donar/{user_id}', 'TblPostController@ban_donar');
+Route::get('/ban-user/{user_id}', 'TblPostController@ban_user');
+Route::get('/create-admin', 'TblPostController@admin_registration');
+Route::post('/admin-save', 'TblPostController@save_admin');
 
 
 
 
 
-
-
-
-
-
-
+////////////////////////
 
 
 ////Dashboardhome
-Route::get('/dashboard','BloodbankController@index')->name('index');
+Route::get('/dashboard','DashboardhomeController@index');
 
 
 //Patients
@@ -90,13 +131,17 @@ Route::get('/allmedicine','MedicineController@allmedicine')->name('allmedicine')
 Route::get('/Department','DepartmentController@index')->name('Department');
 Route::post('/Department/create','DepartmentController@create')->name('Department_create');
 Route::get('/alldepartment','DepartmentController@alldepartment')->name('alldepartment');
+
+
+
+
 //addnotice
 
 Route::get('/Notice','NoticeController@index')->name('Notice');
 Route::post('/Notice/create','NoticeController@create')->name('Notice_create');
 
 
-
+///////
 
 Route::get('/', function () {
     return view('welcome');

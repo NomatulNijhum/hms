@@ -58,7 +58,7 @@ alldoctor
                                 <th scope="col">Doctor Name</th>
                                 <th scope="col">Date Of Birth</th>
                                 <th scope="col">Department Name</th>
-                                <th scope="col">Experience</th>
+                                <th scope="col">Age</th>
                                 <th scope="col">Phone</th>
                                 <th scope="col">Email</th>
                                 <th scope="col">Gender</th>
@@ -78,7 +78,7 @@ alldoctor
                                 <td>{{ $doctor->date_of_birth }}</td>
                                 <td>{{ $doctor->department_name }}</td>
                                 <td>{{ $doctor->experience}}</td>
-                                <td>{{ $doctor->age }}</td>
+                                <td>{{ $doctor->date_of_birth }}</td>
                                 <td>{{ $doctor->phone }}</td>
                                 <td>{{ $doctor->email }}</td>
                                 <td>{{ $doctor->gender }}</td>
