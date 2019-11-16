@@ -33,7 +33,7 @@ Route::get('/bloodbank', 'TblAdminController@home');
 Route::get('/login-user', 'TblAdminController@login_user');
 Route::get('/donar-view', 'TblAdminController@donar');
 Route::get('/registration-form', 'TblAdminController@registration');
-Route::get('/about-us', 'TblAdminController@about');
+//Route::get('/about-us', 'TblAdminController@about');
 Route::get('/community', 'TblAdminController@community_page');
 Route::get('/details', 'TblAdminController@details_page');
 
@@ -65,6 +65,21 @@ Route::post('/admin-save', 'TblPostController@save_admin');
 
 
 ////Dashboardhome
+
+Route::get('/role','RoleController@index')->name('role_index');//role
+Route::post('/role/create','RoleController@create')->name('role_create');//homepage
+
+
+
+///
+
+Route::get('/register','RegistrationController@index')->name('register_index');//homepage
+Route::post('/register/create','RegistrationController@create')->name('register');
+
+
+///
+
+
 Route::get('/dashboard','DashboardhomeController@index');
 
 
@@ -142,6 +157,12 @@ Route::post('/Notice/create','NoticeController@create')->name('Notice_create');
 
 
 ///////
+
+
+
+
+
+
 
 Route::get('/', function () {
     return view('welcome');

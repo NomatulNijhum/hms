@@ -37,4 +37,11 @@ class User extends Authenticatable implements MustVerifyEmail
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+
+
+
+    function relationBetweenRole(){
+      return $this->hasOne('App\Role','id','role_id');
+  }
 }

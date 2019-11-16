@@ -2,17 +2,43 @@
 
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
-
 use DB;
-use App\User;
 use Session;
 use Redirect;
 
 class TblUserController extends Controller
 {
+    public function index(Request $request)
+    {
+    	$data=array();
+    	$data['user_id']=$request->user_id;
+    	$data['user_name']=$request->un;
+    	$data['user_age']=$request->uage;
+      $data['user_designation']=$request->ud;
+    	$data['user_email']=$request->ue;
+    	$data['user_address']=$request->ua;
+    	$data['user_password']=$request->up;
+    	$data['user_con_password']=$request->cp;
+    	$data['user_blood_group']=$request->bg;
+      $data['user_phone']=$request->uph;
 
+    	$user_id=DB::table('tbl_users')
+    	        ->insertGetId($data);
+      if($user_id){
+      	 Session::put('name',$request->un);
+      	 Session::put('email',$request->ue);
+         Session::put('designation',$request->ud);
+      	 Session::put('user_id',$user_id);
+         Session::put('blood',$request->bg);
+         Session::put('Age',$request->uage);
+         Session::put('phone',$request->uph);
+      	 return Redirect::to('/user-profile');
+      }else{
+      	Session::put('message',"User sign up not done");
+      	return Redirect::to('/registration-form');
+      }
 
-
+    }
     public function login_user(Request $request)
     {
       $user_email=$request->ue;

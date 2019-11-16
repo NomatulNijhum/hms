@@ -19,13 +19,13 @@
 
 <body>b
     <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar">
-        <div class="container"><a class="navbar-brand logo" href="{{url('/')}}"><strong>Sheba</strong></a><button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+        <div class="container"><a class="navbar-brand logo" href="{{url('/')}}"><strong>Sheba Blood Bank </strong></a><button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
             <div
                 class="collapse navbar-collapse" id="navcol-1">
                 <ul class="nav navbar-nav ml-auto main-menu">
                   <li class="nav-item" role="presentation"><a class="nav-link" href="{{url('/')}}">Home</a></li>
                 <li class="nav-item" role="presentation"><a class="nav-link" href="{{url('/donar-view')}}">Donar</a></li>
-                <li class="nav-item" role="presentation"><a class="nav-link" href="{{url('/about-us')}}">about us</a></li>
+
                 <li class="nav-item" role="presentation"><a class="nav-link" href="{{url('/community')}}">Community</a></li>
                 <li class="nav-item" role="presentation"><a class="nav-link" href="{{url('/registration-form')}}">registration</a></li>
                    <?php
@@ -105,7 +105,7 @@
             </div>
         </div>
         <div class="footer-copyright">
-            <p>© 2018 Copyright Text</p>
+            <p>© 2019 Copyright Text</p>
             <li><a href="{{url('/login-admin')}}">admin login</a></li>
         </div>
 
