@@ -18,4 +18,14 @@ class RoleController extends Controller
     ]);
     return back();
   }
+  function allrole()
+  {
+
+     $roles = role::all();
+     // echo $users;
+   return view('role.allrole',compact('roles'));
+  }
+
+
+
 }

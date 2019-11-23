@@ -16,8 +16,8 @@ class CreateDoctorsTable extends Migration
         Schema::create('doctors', function (Blueprint $table) {
     $table->bigIncrements('id');
    $table->string('doctor_name');
+   $table->Integer('department_id');
    $table->date('date_of_birth');
-   $table->string('department_name');
    $table->string('experience');
    $table->string('age');
    $table->string('phone');
@@ -27,7 +27,7 @@ class CreateDoctorsTable extends Migration
    $table->longText('address');
    $table->string('picture');
    $table->timestamps();
-
+   //$table->foreign('department_id')->references('id')->on('department')->onDelete('cascade');
         });
     }
 

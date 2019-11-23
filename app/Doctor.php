@@ -13,4 +13,11 @@ protected $fillable = [
   'password',
 ];
 
+
+
+
+    function relationBetweenDepartment(){
+        return $this->hasOne('App\Department','id','department_id');
+    }
+
 }

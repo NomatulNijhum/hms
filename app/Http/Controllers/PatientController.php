@@ -31,8 +31,10 @@ class PatientController extends Controller
           'File'=>$request->File,
           'created_at' => Carbon::now(),
 
-
         ]);
+
+        return back();
+
       }
       function allpatient()
       {

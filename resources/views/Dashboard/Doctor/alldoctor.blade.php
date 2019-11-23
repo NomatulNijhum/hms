@@ -72,24 +72,36 @@ alldoctor
                             <tbody>
 
                               @foreach($doctors as $doctor)
-                              <tr>
-                                <th scope="row">{{ $doctor->id }}</th>
-                                <td>{{ $doctor->doctor_name}}</td>
-                                <td>{{ $doctor->date_of_birth }}</td>
-                                <td>{{ $doctor->department_name }}</td>
-                                <td>{{ $doctor->experience}}</td>
-                                <td>{{ $doctor->date_of_birth }}</td>
-                                <td>{{ $doctor->phone }}</td>
-                                <td>{{ $doctor->email }}</td>
-                                <td>{{ $doctor->gender }}</td>
-                                <td>{{ $doctor->doctor_details }}</td>
-                                <td>{{ $doctor->address }}</td>
-                                <td>{{ $doctor->picture}}</td>
+
+                    <tr>
+                    <th scope="row">{{ $doctor->id }}</th>
+										<td>{{ $doctor->doctor_name}}</td>
+										<td>{{ $doctor->date_of_birth }}</td>
+
+                      <td>{{ $doctor->relationBetweenDepartment->department_name }}</td>
+
+											<td>{{ $doctor->experience}}</td>
+                     	<td>{{ $doctor->age}}</td>
+
+											<td>{{ $doctor->phone }}</td>
+											<td>{{ $doctor->email }}</td>
+											<td>{{ $doctor->gender }}</td>
+											<td>{{ $doctor->doctor_details }}</td>
+											<td>{{ $doctor->address }}</td>
+											<td><img width="50px" height="25px" src="{{url('images/'.$doctor->picture)}}"></td>
+
+                    </tr>
+@endforeach
 
 
 
-                              </tr>
-                          @endforeach
+
+
+
+
+
+
+
                             </tbody>
                             </table>
 

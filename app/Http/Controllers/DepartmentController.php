@@ -24,6 +24,8 @@ class DepartmentController extends Controller
 
 
           ]);
+
+              return back();
         }
 
         function alldepartment()

@@ -47,11 +47,11 @@
 		<span class="theme-color theme-yellow" data-color="yellow"></span>
 	</div>
 	<!-- /Color Changer -->
-	<div class="wrapper">
+	<div class="wrapper"style="padding:0px">
 		<!-- Page Content -->
-		<div id="content">
+		<div id="content"style="padding:0px">
 			<!-- Top Navigation -->
-			<div class="container top-brand">
+			<div class="container top-brand"style="padding:0px">
 				<nav class="navbar navbar-default">
 					<div class="navbar-header">
 						<div class="sidebar-header"> <a href="index.html"><img src="{{asset('frontend/assets/images/logo-dark.png')}}"class="logo" alt="logo"></a>
@@ -130,9 +130,9 @@
 
 			<!-- /Top Navigation -->
 			<!-- Menu -->
-			<div class="container menu-nav">
+			<div class="container menu-nav" style="padding:0px">
 				<nav class="navbar navbar-expand-lg proclinic-bg text-white">
-					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+					<button class="navbar-toggler" ype="button" data-toggle="collapse" data-target="#navbarSupportedContent"
 					 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 						<span class="ti-menu text-white"></span>
 					</button>
@@ -146,6 +146,17 @@
 									<a class="dropdown-item" href="/dashboard"> Dashboard Index</a>
 								</div>
 							</li>
+
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+								 aria-expanded="false"><span class="ti-user"></span> Role</a>
+								<div class="dropdown-menu">
+									<a class="dropdown-item" href="role">Add Role </a>
+									<a class="dropdown-item" href="allrole">All Role</a>
+
+
+								</div>
+							</li>
 							<li class="nav-item dropdown">
 								<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
 								 aria-expanded="false"><span class="ti-user"></span> Department</a>
@@ -153,8 +164,10 @@
 									<a class="dropdown-item" href="Department">Add Department</a>
 									<a class="dropdown-item" href="alldepartment">All Department</a>
 
+
 								</div>
 							</li>
+
 
 							<li class="nav-item dropdown">
 								<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
@@ -195,7 +208,7 @@
 								 aria-expanded="false"><span class="ti-pencil-alt"></span> Appointments</a>
 								<div class="dropdown-menu">
 									<a class="dropdown-item" href="appointment">Add Appointment</a>
-									<a class="dropdown-item" href="appointments.html">All Appointments</a>
+									<a class="dropdown-item" href="allappointment">All Appointments</a>
 									<a class="dropdown-item" href="about-appointment.html">Appointment Details</a>
 									<a class="dropdown-item" href="edit-appointment.html">Edit Appointment</a>
 								</div>
@@ -216,7 +229,7 @@
 															<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
 															 aria-expanded="false"><span class="ti-key"></span> Room Allotments</a>
 															<div class="dropdown-menu">
-																<a class="dropdown-item" href="add-room.html">Add Room Allotment</a>
+																<a class="dropdown-item" href="addroom">Add Room Allotment</a>
 																<a class="dropdown-item" href="rooms.html">All Rooms</a>
 																<a class="dropdown-item" href="edit-room.html">Edit Room Allotment</a>
 															</div>

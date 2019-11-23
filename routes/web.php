@@ -68,13 +68,13 @@ Route::post('/admin-save', 'TblPostController@save_admin');
 
 Route::get('/role','RoleController@index')->name('role_index');//role
 Route::post('/role/create','RoleController@create')->name('role_create');//homepage
-
+Route::get('/allrole','RoleController@allrole')->name('allrole');
 
 
 ///
 
 Route::get('/register','RegistrationController@index')->name('register_index');//homepage
-Route::post('/register/create','RegistrationController@create')->name('register');
+Route::post('/register/create','RegistrationController@create')->name('register_create');
 
 
 ///
@@ -98,6 +98,7 @@ Route::get('/alldoctor','DoctorController@alldoctor')->name('alldoctor');
 
 Route::get('/appointment','AppointmentController@index')->name('appointment');
 Route::post('/appointment/create','AppointmentController@create')->name('appointment_create');
+Route::get('/allappointment','AppointmentController@allappointment')->name('allappointment');
 
 
 
@@ -107,6 +108,14 @@ Route::post('/appointment/create','AppointmentController@create')->name('appoint
 Route::get('/schedule','ScheduleController@index')->name('schedule');
 Route::post('/schedule/create','ScheduleController@create')->name('schedule_create');
 
+
+
+
+
+///RoomAllocation
+
+Route::get('/addroom','RoomAllotmentController@index')->name('addroom');
+//Route::post('/schedule/create','ScheduleController@create')->name('schedule_create');
 
 
 

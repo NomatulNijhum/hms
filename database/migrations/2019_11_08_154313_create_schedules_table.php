@@ -15,10 +15,11 @@ class CreateSchedulesTable extends Migration
     {
         Schema::create('schedules', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('doctor_name');
+            $table->Integer('doctor_id');
             $table->string('available_days');
-            $table->date('available_times');
-            $table->string('serial_visibility');
+            $table->date('available_dates');
+            $table->time('available_times');
+            $table->time('available_time');
 
             $table->timestamps();
 

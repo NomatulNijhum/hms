@@ -40,41 +40,42 @@ Add Appointment
               <form id="appointmentcreate" action="{{route ('appointment_create')}}" method="post" enctype="multipart/form-data">
                 @csrf
 
-								<div class="form-row">
-									<div class="form-group col-md-6">
-										<label for="patient_id">Patient ID</label>
-										<input type="text"name="patient_id" class="form-control" placeholder="patient_id" id="patient_id">
-									</div>
-									<div class="form-group col-md-6">
-										<label for="department">Department</label>
-										<select class="form-control"name="department" id="department">
-											<option>Neuro</option>
-											<option>Ortho</option>
-											<option>General</option>
-										</select>
-									</div>
-									<div class="form-group col-md-6">
-										<label for="doctor_name">Doctor Name</label>
-										<input type="text"name="doctor_name" placeholder="doctor_name" class="form-control" id="doctor_name">
-									</div>
+
+
+								<div class="form-group col-md-6">
+								<label>Patient Name</label>
+								  <select name="patient_id" class="form-control">
+								 @foreach($patients as $patient)
+				  <option value="{{ $patient->id }}">{{ $patient->Patient_Name}}</option>
+								 @endforeach
+										  </select>
+											</div>
+
+											<div class="form-group col-md-6">
+											  <label>Department</label>
+									<select name="department_id" class="form-control">
+											  @foreach($departments as $department)
+									   <option value="{{ $department->id }}">{{ $department->department_name}}</option>
+												      @endforeach
+										  </select>
+											 </div>
+
+											 <div class="form-group col-md-6">
+									 			<label>Doctor Name</label>
+									 <select name="doctor_id" class="form-control">
+									 			@foreach($doctors as $doctor)
+									 	 <option value="{{ $doctor->id }}">{{ $doctor->doctor_name}}</option>
+									 						@endforeach
+									 		</select>
+									 		 </div>
+
+
+
 									<div class="form-group col-md-6">
 										<label for="appointment_date">Appointment Date</label>
 										<input type="date" name="appointment_date" placeholder="appointment_date" class="form-control" id="appointment_date">
 									</div>
-									<div class="form-group col-md-6">
-										<label for="time_slot">Time Slot</label>
-										<select class="form-control" name="time_slot"id="time_slot">
-											<option>10AM-11AM</option>
-											<option>11AM-12pm</option>
-											<option>12PM-01PM</option>
-											<option>2PM-3PM</option>
-											<option>3PM-4PM</option>
-											<option>4PM-5PM</option>
-											<option>6PM-7PM</option>
-											<option>7PM-8PM</option>
-											<option>8PM-9PM</option>
-										</select>
-									</div>
+
 									<div class="form-group col-md-6">
 										<label for="token_number">Token Number <small>(Auto Generated)</small></label>
 										<input type="text" name="token_number"placeholder="token_number" class="form-control" id="token_number">

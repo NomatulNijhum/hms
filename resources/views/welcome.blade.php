@@ -89,10 +89,7 @@
                 <div class="links">
                     <a href="{{url('/users')}}">users</a>
                     <a href="{{url('/bloodbank')}}">BloodBank</a>
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
+                
 
                 </div>
             </div>

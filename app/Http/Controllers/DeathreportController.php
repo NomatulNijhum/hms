@@ -25,6 +25,7 @@ class DeathreportController extends Controller
 
 
     ]);
+        return back();
   }
   function alldeathreport()
   {

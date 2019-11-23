@@ -40,11 +40,27 @@ Add Schedule
 
             <form id="schedulecreate" action="{{route ('schedule_create')}}" method="post" enctype="multipart/form-data">
               @csrf
-              <div class="form-row">
+        
+
                 <div class="form-group col-md-6">
-                  <label for="doctor_name">Doctor Name</label>
-                  <input type="text" name="doctor_name" class="form-control" placeholder="doctor_name" id="doctor_name">
+                    <label>Doctor Name</label>
+                    <select name="doctor_id" class="form-control">
+                        @foreach($doctors as $doctor)
+                            <option value="{{$doctor->id }}">{{ $doctor->doctor_name}}</option>
+                        @endforeach
+
+
+                    </select>
                 </div>
+
+
+
+
+
+
+
+
+
 
                 <div class="form-group col-md-6">
                   <label for="available_days">Available Days</label>
@@ -60,14 +76,18 @@ Add Schedule
                </select>
                 </div>
                 <div class="form-group col-md-6">
-                  <label for="available_times">Available Date</label>
-                  <input type="date" name="available_times" placeholder="available_times" class="form-control" id="available_times">
-                </div>
-                <div class="form-group col-md-6">
-                  <label for="serial_visibility">Serial Visibility</label>
-                  <input type="text" name="serial_visibility" placeholder="serial_visibility" class="form-control" id="serial_visibility">
+                  <label for="available_dates">Available Date</label>
+                  <input type="date" name="available_dates" placeholder="available_dates" class="form-control" id="available_dates">
                 </div>
 
+                                <div class="form-group col-md-6">
+                                  <label for="available_times">Start Time</label>
+                                  <input type="time" name="available_times" placeholder="available_times" class="form-control" id="available_times">
+                                </div>
+                                <div class="form-group col-md-6">
+                                  <label for="available_time">End Time</label>
+                                  <input type="time" name="available_time" placeholder="available_time" class="form-control" id="available_time">
+                                </div>
 
 
                 <div class="form-group col-md-6 mb-3">
