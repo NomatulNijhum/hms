@@ -73,7 +73,7 @@ Route::get('/allrole','RoleController@allrole')->name('allrole');
 
 ///
 
-Route::get('/register','RegistrationController@index')->name('register_index');//homepage
+Route::get('/array/register','RegistrationController@index')->name('register_index');//homepage
 Route::post('/register/create','RegistrationController@create')->name('register_create');
 
 
@@ -88,6 +88,9 @@ Route::get('/patient','PatientController@index')->name('patient');
 Route::post('/patient/create','PatientController@create')->name('patient_create');
 Route::get('/allpatient','PatientController@allpatient')->name('allpatient');
 Route::get('/patientdetails','PatientController@patientdetails')->name('patientdetails');
+Route::get('/allpatient/{patient_id}','PatientController@single_patient')->name('single_patient');
+Route::get('/deletepatient/{patient_id}','PatientController@deletepatient')->name('deletepatient');
+
 
 //Doctor
 Route::get('/doctor','DoctorController@index')->name('doctor');
@@ -99,6 +102,11 @@ Route::get('/alldoctor','DoctorController@alldoctor')->name('alldoctor');
 Route::get('/appointment','AppointmentController@index')->name('appointment');
 Route::post('/appointment/create','AppointmentController@create')->name('appointment_create');
 Route::get('/allappointment','AppointmentController@allappointment')->name('allappointment');
+
+
+
+
+
 
 
 
@@ -115,9 +123,17 @@ Route::post('/schedule/create','ScheduleController@create')->name('schedule_crea
 ///RoomAllocation
 
 Route::get('/addroom','RoomAllotmentController@index')->name('addroom');
-//Route::post('/schedule/create','ScheduleController@create')->name('schedule_create');
+Route::post('/addroom/create','RoomAllotmentController@create')->name('room_create');
+Route::get('/allroom','RoomAllotmentController@allroom')->name('allroom');
 
 
+
+
+
+
+
+///payments
+Route::get('/addpayment','PaymentController@index')->name('addpayment');
 
 //Birthreport
 Route::get('/Birthreport','BirthreportController@index')->name('Birthreport');

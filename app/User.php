@@ -41,7 +41,9 @@ class User extends Authenticatable implements MustVerifyEmail
 
 
 
-    function relationBetweenRole(){
-      return $this->hasOne('App\Role','id','role_id');
-  }
+
+                public function relationBetweenDoctor(){
+                    return $this->hasOne('App\Role','id','role_id');
+                }
+
 }

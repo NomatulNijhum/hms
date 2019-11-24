@@ -69,7 +69,7 @@ allpatient
 
 
                                 <th scope="col">File</th>
-
+                                <th scope="col">Action</th>
 
 
 
@@ -89,7 +89,10 @@ allpatient
                                 <td>{{ $patient->Address }}</td>
                                 <td>{{ $patient->File }}</td>
 
-
+																<td>
+																	<a href="{{ url('/allpatient') }}/{{ $patient->id }}" class="btn btn-primary">Edit</a>
+																<a href="{{ url('/deletepatient') }}/{{ $patient->id }}" class="btn btn-danger">Delete</a>
+															 </td>
                               </tr>
                           @endforeach
                             </tbody>

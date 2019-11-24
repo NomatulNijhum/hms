@@ -230,7 +230,7 @@
 															 aria-expanded="false"><span class="ti-key"></span> Room Allotments</a>
 															<div class="dropdown-menu">
 																<a class="dropdown-item" href="addroom">Add Room Allotment</a>
-																<a class="dropdown-item" href="rooms.html">All Rooms</a>
+																<a class="dropdown-item" href="allroom">All Rooms</a>
 																<a class="dropdown-item" href="edit-room.html">Edit Room Allotment</a>
 															</div>
 														</li>
@@ -238,7 +238,7 @@
 								<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
 								 aria-expanded="false"><span class="ti-money"></span> Payments</a>
 								<div class="dropdown-menu">
-									<a class="dropdown-item" href="add-payment.html">Add Payment</a>
+									<a class="dropdown-item" href="addpayment">Add Payment</a>
 									<a class="dropdown-item" href="payments.html">All Payments</a>
 									<a class="dropdown-item" href="about-payment.html">Payment Invoice</a>
 								</div>

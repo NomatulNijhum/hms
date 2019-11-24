@@ -24,17 +24,21 @@
                     </div>
 
 
+                    <div class="form-group col-md-6">
+                    <label>Role</label>
+                      <select name="role_id" class="form-control">
+                     @foreach($roles as $role)
+              <option value="{{ $role->id }}">{{ $role->role_name}}</option>
+                     @endforeach
+                          </select>
+                          </div>
 
-                    <div class="form-group">
-                        <label>Role</label>
-                        <select name="role_id" class="form-control">
-                            @foreach($roles as $role)
-                                <option value="{{ $role->id }}">{{ $role->role_name }}</option>
-                            @endforeach
 
 
-                        </select>
-                    </div>
+
+
+
+
 
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
@@ -42,28 +46,6 @@
         </div>
     </div>
 
-
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6 offset-md-3">
-                <table class="table">
-                  <thead>
-                    <tr>
-                      <th scope="col">ID</th>
-                      <th scope="col">Name</th>
-                      <th scope="col">Role</th>
-
-                    </tr>
-                  </thead>
-                  <tbody>
-
-@foreach($users as $user)
-                    <tr>
-                      <th scope="row">{{ $user->id }}</th>
-                      <td>{{ $user->name }}</td>
-                      <td>{{ $user->relationBetweenRole->role_name }}</td>
-                    </tr>
-@endforeach
 
 
 

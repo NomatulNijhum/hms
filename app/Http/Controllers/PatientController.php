@@ -23,7 +23,7 @@ class PatientController extends Controller
         Patient::insert([
           'Patient_Name'=>$request->Patient_Name,
           'Date_Of_Birth'=>$request->Date_Of_Birth,
-          'Age'=>$request->Age,
+          'Age'=>$request->Age ,
           'Phone'=>$request->Phone,
           'Email'=>$request->Email,
           'Gender'=>$request->Gender,
@@ -36,6 +36,8 @@ class PatientController extends Controller
         return back();
 
       }
+
+
       function allpatient()
       {
 
@@ -48,6 +50,26 @@ class PatientController extends Controller
               {
                   return view ('Dashboard.Patient.patientdetails');
               }
+
+
+
+//edit patients
+
+function single_patient($patient_id)
+{
+  $single_patient=Patient::find($patient_id);
+    return view ('Dashboard.Patient.edit_patient',compact('single_patient'));
+}
+
+
+
+function deletepatient($patient_id)
+{
+Patient::findOrFail($patient_id)->delete();
+return back();
+}
+
+
 
 
 

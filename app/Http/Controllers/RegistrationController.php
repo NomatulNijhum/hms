@@ -12,7 +12,6 @@ class RegistrationController extends Controller
     function index()
     {
         $roles = Role::all();
-
         return view('auth.register',compact('roles'));
     }
 

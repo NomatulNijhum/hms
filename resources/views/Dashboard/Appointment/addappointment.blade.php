@@ -76,10 +76,7 @@ Add Appointment
 										<input type="date" name="appointment_date" placeholder="appointment_date" class="form-control" id="appointment_date">
 									</div>
 
-									<div class="form-group col-md-6">
-										<label for="token_number">Token Number <small>(Auto Generated)</small></label>
-										<input type="text" name="token_number"placeholder="token_number" class="form-control" id="token_number">
-									</div>
+								
 									<div class="form-group col-md-12">
 										<label for="problem">Problem</label>
 										<textarea placeholder="Problem" name="problem" class="form-control" id="problem" rows="3"></textarea>

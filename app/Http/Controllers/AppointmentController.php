@@ -25,17 +25,19 @@ class AppointmentController extends Controller
 
   function create(Request $request)
   {
+
     Appointment::insert([
       'patient_id'=>$request->patient_id,
   'department_id'=>$request->department_id,
       'doctor_id'=>$request->doctor_id,
+
+
+
+
       'appointment_date'=>$request->appointment_date,
-
-      'token_number'=>$request->token_number,
-      'problem'=>$request->problem,
-        'created_at' => Carbon::now(),
-
-
+        'token_number'=>'hms'.rand(1000,100000),
+         'problem'=>$request->problem,
+         'created_at' => Carbon::now(),
 
 
     ]);

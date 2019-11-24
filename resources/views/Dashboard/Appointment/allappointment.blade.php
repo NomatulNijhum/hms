@@ -77,9 +77,12 @@ allappointment
                               @foreach($appointments as $appointment)
                               <tr>
                               <th scope="row">{{$appointment->id }}</th>
-                                <td>{{ $appointment->patient_id }}</td>
-                                <td>{{ $appointment->department_id}}</td>
-                                <td>{{ $appointment->doctor_id}}</td>
+
+														  <td>{{ $appointment->relationBetweenPatient->Patient_Name }}</td>
+                              <td>{{ $appointment->relationBetweenDepartment->department_name }}</td>
+                               <td>{{ $appointment->relationBetweenDoctor->doctor_name }}</td>
+
+
                                 <td>{{ $appointment->appointment_date }}</td>
                                 <td>{{ $appointment->token_number}}</td>
                                 <td>{{ $appointment->problem }}</td>
