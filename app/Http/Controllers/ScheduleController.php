@@ -15,7 +15,7 @@ class ScheduleController extends Controller
 
       $doctors = Doctor::all();
       return view ('Dashboard.Schedule.addschedule',compact('doctors'));
-  
+
   }
 
   function create(Request $request)
@@ -32,4 +32,28 @@ class ScheduleController extends Controller
 
     ]);
 }
+
+        //edit schedule
+
+        function single_schedule($schedule_id)
+        {
+          $single_schedule=  Schedule::find($schedule_id);
+            return view ('Dashboard.Schedule.edit_schedule',compact('single_schedule'));
+        }
+
+
+
+        function deleteschedule($schedule_id)
+        {
+      Schedule::findOrFail($schedule_id)->delete();
+        return back();
+        }
+
+
+
+
+
+
+
+
 }

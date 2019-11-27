@@ -49,22 +49,32 @@ doctor
 										<label for="Doctor-name">Doctor Name</label>
 										<input type="text" class="form-control" name="doctor_name" placeholder="Doctor name" id="Doctor-name">
 									</div>
+
+
+									<div class="form-group col-md-6">
+											<label>Department</label>
+											<select name="department_id" class="form-control">
+													@foreach($departments as $department)
+															<option value="{{ $department->id }}">{{ $department->department_name}}</option>
+													@endforeach
+
+
+											</select>
+									</div>
+
+
+
+
+
+
+
+
 									<div class="form-group col-md-6">
 										<label for="date_of_birth">Date Of Birth</label>
 										<input type="date" name="date_of_birth" placeholder="Date of Birth"  class="form-control" id="date_of_birth">
                                     </div>
 
 
-										                   	<div class="form-group col-md-6">
-										                        <label>Department</label>
-										                        <select name="department_id" class="form-control">
-										                            @foreach($departments as $department)
-										                                <option value="{{ $department->id }}">{{ $department->department_name}}</option>
-										                            @endforeach
-
-
-										                        </select>
-										                    </div>
 
 									<div class="form-group col-md-6">
 										<label for="experience">Experience</label>

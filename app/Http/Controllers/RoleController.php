@@ -28,4 +28,21 @@ class RoleController extends Controller
 
 
 
+
+
+    //edit role
+
+    function single_role($role_id)
+    {
+      $single_role=Role::find($role_id);
+        return view ('role.edit_role',compact('single_role'));
+    }
+
+    function deleterole($role_id)
+    {
+    Role::findOrFail($role_id)->delete();
+    return back();
+    }
+
+
 }

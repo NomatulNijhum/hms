@@ -51,7 +51,8 @@
 		<!-- Page Content -->
 		<div id="content"style="padding:0px">
 			<!-- Top Navigation -->
-			<div class="container top-brand"style="padding:0px">
+
+			<div class="container-fluid"style="padding:0px">
 				<nav class="navbar navbar-default">
 					<div class="navbar-header">
 						<div class="sidebar-header"> <a href="index.html"><img src="{{asset('frontend/assets/images/logo-dark.png')}}"class="logo" alt="logo"></a>
@@ -86,7 +87,7 @@
 										</div>
 									</div>
 								</div>
-							</div>
+				</div>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
@@ -130,7 +131,8 @@
 
 			<!-- /Top Navigation -->
 			<!-- Menu -->
-			<div class="container menu-nav" style="padding:0px">
+			<div class="container menu-nav">
+
 				<nav class="navbar navbar-expand-lg proclinic-bg text-white">
 					<button class="navbar-toggler" ype="button" data-toggle="collapse" data-target="#navbarSupportedContent"
 					 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -154,7 +156,6 @@
 									<a class="dropdown-item" href="role">Add Role </a>
 									<a class="dropdown-item" href="allrole">All Role</a>
 
-
 								</div>
 							</li>
 							<li class="nav-item dropdown">
@@ -167,6 +168,9 @@
 
 								</div>
 							</li>
+
+
+
 
 
 							<li class="nav-item dropdown">
@@ -197,7 +201,7 @@
 								 aria-expanded="false"><span class="ti-key"></span> Schedule</a>
 								<div class="dropdown-menu">
 									<a class="dropdown-item" href="schedule">Add Schedule</a>
-									<a class="dropdown-item" href="rooms.html">All Schedules  </a>
+									<a class="dropdown-item" href="allschedule">All Schedules  </a>
 
 								</div>
 							</li>
@@ -219,8 +223,8 @@
 						<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
 						 aria-expanded="false"><span class="ti-pencil-alt"></span> Prescription</a>
 															<div class="dropdown-menu">
-																<a class="dropdown-item" href="add-appointment.html">Add Patient Case Study</a>
-																<a class="dropdown-item" href="appointments.html">All Patients Case Study</a>
+																<a class="dropdown-item" href="add_case_study">Add Patient Case Study</a>
+																<a class="dropdown-item" href="all_case_study">All Patients Case Study</a>
 																<a class="dropdown-item" href="about-appointment.html">Add Prescription</a>
 															</div>
 														</li>
@@ -296,7 +300,7 @@
 
 
 
-			<div class="container">
+
 				<div class="d-sm-flex justify-content-center">
 				  <span class="text-muted text-center d-block d-sm-inline-block">N.J Nijhum,,16103226,Fall 2019 <a href="" target="_blank"></a>. All rights reserved.</span>
 				</div>

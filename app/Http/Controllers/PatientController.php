@@ -15,11 +15,18 @@ class PatientController extends Controller
         }
 
 
-
-
-
       function create(Request $request)
       {
+        if ($request->Picture) {
+      $file=$request->File('Picture');
+      $ext=$file->getClientOriginalExtension();
+      $filename=$request->email . '.' . $ext;
+      $file->move('images/',$filename);
+    }
+
+
+
+
         Patient::insert([
           'Patient_Name'=>$request->Patient_Name,
           'Date_Of_Birth'=>$request->Date_Of_Birth,
@@ -28,7 +35,7 @@ class PatientController extends Controller
           'Email'=>$request->Email,
           'Gender'=>$request->Gender,
           'Address'=>$request->Address,
-          'File'=>$request->File,
+          'Picture' => $filename,
           'created_at' => Carbon::now(),
 
         ]);

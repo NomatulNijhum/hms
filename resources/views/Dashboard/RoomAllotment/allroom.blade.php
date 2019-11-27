@@ -89,15 +89,6 @@ allroom
 
 
 
-
-
-
-
-
-
-
-
-
                       </tr>
                   @endforeach
                     </tbody>

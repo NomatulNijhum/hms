@@ -1,7 +1,7 @@
 @extends('Dashboard.Home.app')
 
 @section('title')
-Add Schedule
+Edit  Schedule
 @endsection
 
 @section('content')
@@ -11,7 +11,7 @@ Add Schedule
       <div class="container mt-0">
         <div class="row breadcrumb-bar">
           <div class="col-md-6">
-            <h3 class="block-title">Add Schedule</h3>
+            <h3 class="block-title">EditSchedule</h3>
           </div>
           <div class="col-md-6">
             <ol class="breadcrumb">
@@ -21,7 +21,7 @@ Add Schedule
                 </a>
               </li>
               <li class="breadcrumb-item">Schedules</li>
-              <li class="breadcrumb-item active">Add Schedule</li>
+              <li class="breadcrumb-item active">Edit Schedule</li>
             </ol>
           </div>
         </div>
@@ -36,25 +36,22 @@ Add Schedule
         <!-- Widget Item -->
         <div class="col-md-12">
           <div class="widget-area-2 proclinic-box-shadow">
-            <h3 class="widget-title">Add Schedule</h3>
+            <h3 class="widget-title">Edit Schedule</h3>
 
             <form id="schedulecreate" action="{{route ('schedule_create')}}" method="post" enctype="multipart/form-data">
               @csrf
 
 
+              <div class="form-group col-md-6">
+                  <label>Doctor Name</label>
+                  <select name="doctor_id" class="form-control">
+                      @foreach($doctors as $doctor)
+                          <option value="{{$doctor->id }}">{{ $doctor->doctor_name}}</option>
+                      @endforeach
 
 
-
-                <div class="form-group col-md-6">
-                    <label>Doctor Name</label>
-                    <select name="doctor_id" class="form-control">
-                        @foreach($doctors as $doctor)
-                            <option value="{{$doctor->id }}">{{ $doctor->doctor_name}}</option>
-                        @endforeach
-
-
-                    </select>
-                </div>
+                  </select>
+              </div>
 
 
 
@@ -67,7 +64,7 @@ Add Schedule
 
                 <div class="form-group col-md-6">
                   <label for="available_days">Available Days</label>
-                  <select class="form-control" name="available_days" id="available_days">
+                  <select class="form-control" name="available_days"value="{{ $single_schedule->available_days}}" id="available_days">
                     <option>Sunday</option>
                     <option>Monday</option>
                     <option>Tuesday</option>
@@ -80,16 +77,16 @@ Add Schedule
                 </div>
                 <div class="form-group col-md-6">
                   <label for="available_dates">Available Date</label>
-                  <input type="date" name="available_dates" placeholder="available_dates" class="form-control" id="available_dates">
+                  <input type="date" name="available_dates"value="{{ $single_schedule->available_dates}}"  placeholder="available_dates" class="form-control" id="available_dates">
                 </div>
 
                                 <div class="form-group col-md-6">
                                   <label for="available_times">Start Time</label>
-                                  <input type="time" name="available_times" placeholder="available_times" class="form-control" id="available_times">
+                                  <input type="time" name="available_times" value="{{ $single_schedule->available_times}}"placeholder="available_times" class="form-control" id="available_times">
                                 </div>
                                 <div class="form-group col-md-6">
                                   <label for="available_time">End Time</label>
-                                  <input type="time" name="available_time" placeholder="available_time" class="form-control" id="available_time">
+                                  <input type="time" name="available_time"value="{{ $single_schedule->available_time}}" placeholder="available_time" class="form-control" id="available_time">
                                 </div>
 
 

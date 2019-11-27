@@ -56,7 +56,7 @@ allbirthreport
                               <tr>
 
 
-                                <th scope="col">#</th>
+                                <th scope="col">Id</th>
                                 <th scope="col">Patient ID</th>
                                 <th scope="col">Date</th>
                                 <th scope="col">Title</th>
@@ -70,13 +70,16 @@ allbirthreport
                               @foreach($birthreports as $birthreport)
                               <tr>
                                 <th scope="row">{{ $birthreport->id }}</th>
-                                <td>{{ $birthreport->patient_id}}</td>
-                                <td>{{ $birthreport->date}}</td>
+													
+																<td>{{ $birthreport->date}}</td>
                                 <td>{{ $birthreport->title }}</td>
                                 <td>{{ $birthreport->description}}</td>
                                 <td>{{ $birthreport->doctor_name}}</td>
+																<td>
 
-
+										<a href="{{ url('/allBirthreport') }}/{{ $birthreport->id }}" class="btn btn-primary">Edit</a>
+									<a href="{{ url('/deletebirthreport') }}/{{ $birthreport->id }}" class="btn btn-danger">Delete</a>
+																		 </td>
 
                               </tr>
 
@@ -91,25 +94,9 @@ allbirthreport
 
                       </div>
 								<!--Export links-->
-								<nav aria-label="Page navigation example">
-									<ul class="pagination justify-content-center export-pagination">
-										<li class="page-item">
-											<a class="page-link" href="#"><span class="ti-download"></span> csv</a>
-										</li>
-										<li class="page-item">
-											<a class="page-link" href="#"><span class="ti-printer"></span>  print</a>
-										</li>
-										<li class="page-item">
-											<a class="page-link" href="#"><span class="ti-file"></span> PDF</a>
-										</li>
-										<li class="page-item">
-											<a class="page-link" href="#"><span class="ti-align-justify"></span> Excel</a>
-										</li>
-									</ul>
-								</nav>
+
 								<!-- /Export links-->
-								<button type="button" class="btn btn-danger mt-3 mb-0"><span class="ti-trash"></span> DELETE</button>
-								<button type="button" class="btn btn-primary mt-3 mb-0"><span class="ti-pencil-alt"></span> EDIT</button>
+
 							</div>
 						</div>
 					</div>

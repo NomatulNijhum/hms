@@ -4,9 +4,7 @@
 alldepartment
 @endsection
 
-@push('css')
 
-@endpush
 
 @section('content')
 
@@ -63,6 +61,7 @@ alldepartment
                                 <th scope="col">#</th>
                                 <th scope="col">Department Name</th>
                                 <th scope="col">Description</th>
+																<th scope="col">Action</th>
 
 
 
@@ -77,7 +76,11 @@ alldepartment
                                 <th scope="row">{{ $department->id }}</th>
                                 <td>{{ $department->department_name }}</td>
                                 <td>{{ $department->description}}</td>
+																		<td>
 
+											<a href="{{ url('/alldepartment') }}/{{ $department->id }}" class="btn btn-primary">Edit</a>
+										<a href="{{ url('/deletedepartment') }}/{{ $department->id }}" class="btn btn-danger">Delete</a>
+											 </td>
 
                               </tr>
                           @endforeach
@@ -95,11 +98,3 @@ alldepartment
 				</div>
 			</div>
 @endsection
-
-@push('scripts')
-                <script>
-                    $(document).ready(function() {
-                        $('#dataTable').DataTable();
-                    } );
-                </script>
-@endpush

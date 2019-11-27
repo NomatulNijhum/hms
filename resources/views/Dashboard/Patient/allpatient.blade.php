@@ -68,10 +68,8 @@ allpatient
                                 <th scope="col">Address</th>
 
 
-                                <th scope="col">File</th>
+                                <th scope="col">Picture</th>
                                 <th scope="col">Action</th>
-
-
 
                               </tr>
                             </thead>
@@ -87,11 +85,13 @@ allpatient
                                 <td>{{ $patient->Email }}</td>
                                 <td>{{ $patient->Gender }}</td>
                                 <td>{{ $patient->Address }}</td>
-                                <td>{{ $patient->File }}</td>
 
+																<td><img width="50px" height="25px" src="{{url('images/'.$patient->Picture)}}"></td>
 																<td>
-																	<a href="{{ url('/allpatient') }}/{{ $patient->id }}" class="btn btn-primary">Edit</a>
-																<a href="{{ url('/deletepatient') }}/{{ $patient->id }}" class="btn btn-danger">Delete</a>
+
+
+										<a href="{{ url('/allpatient') }}/{{ $patient->id }}" class="btn btn-primary">Edit</a>
+										<a href="{{ url('/deletepatient') }}/{{ $patient->id }}" class="btn btn-danger">Delete</a>
 															 </td>
                               </tr>
                           @endforeach
@@ -104,25 +104,9 @@ allpatient
 
                       </div>
 								<!--Export links-->
-								<nav aria-label="Page navigation example">
-									<ul class="pagination justify-content-center export-pagination">
-										<li class="page-item">
-											<a class="page-link" href="#"><span class="ti-download"></span> csv</a>
-										</li>
-										<li class="page-item">
-											<a class="page-link" href="#"><span class="ti-printer"></span>  print</a>
-										</li>
-										<li class="page-item">
-											<a class="page-link" href="#"><span class="ti-file"></span> PDF</a>
-										</li>
-										<li class="page-item">
-											<a class="page-link" href="#"><span class="ti-align-justify"></span> Excel</a>
-										</li>
-									</ul>
-								</nav>
+
 								<!-- /Export links-->
-								<button type="button" class="btn btn-danger mt-3 mb-0"><span class="ti-trash"></span> DELETE</button>
-								<button type="button" class="btn btn-primary mt-3 mb-0"><span class="ti-pencil-alt"></span> EDIT</button>
+
 							</div>
 						</div>
 					</div>

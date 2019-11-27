@@ -71,11 +71,11 @@ patient
                 </div>
                 <div class="form-group col-md-12">
                   <label for="exampleFormControlTextarea1">Address</label>
-                  <input type="text" name="Address" placeholder="email" class="form-control" id="Email">
+                  <input type="text" name="Address" placeholder="address" class="form-control" id="Email">
                 </div>
                 <div class="form-group col-md-12">
-                  <label for="file">File</label>
-                  <input type="file" name="File" class="form-control" id="file">
+                  <label for="file">Picture</label>
+                  <input type="file" name="Picture" class="form-control" id="file">
                 </div>
 
 

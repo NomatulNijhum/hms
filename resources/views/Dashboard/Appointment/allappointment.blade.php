@@ -75,20 +75,22 @@ allappointment
                             <tbody>
 
                               @foreach($appointments as $appointment)
-                              <tr>
-                              <th scope="row">{{$appointment->id }}</th>
 
-														  <td>{{ $appointment->relationBetweenPatient->Patient_Name }}</td>
-                              <td>{{ $appointment->relationBetweenDepartment->department_name }}</td>
-                               <td>{{ $appointment->relationBetweenDoctor->doctor_name }}</td>
+															<tr>
 
 
+	                              <th scope="row">{{ $appointment->id }}</th>
+
+	                              <td>{{ $appointment->relationBetweenPatient->Patient_Name}}</td>
+	                              <td>{{ $appointment->relationBetweenDepartment->department_name}}</td>
+																<td>{{ $appointment->relationBetweenDoctor->doctor_name }}</td>
                                 <td>{{ $appointment->appointment_date }}</td>
                                 <td>{{ $appointment->token_number}}</td>
                                 <td>{{ $appointment->problem }}</td>
 
 
                               </tr>
+
                           @endforeach
                             </tbody>
                             </table>
@@ -98,26 +100,9 @@ allappointment
                         </div>
 
                       </div>
-								<!--Export links-->
-								<nav aria-label="Page navigation example">
-									<ul class="pagination justify-content-center export-pagination">
-										<li class="page-item">
-											<a class="page-link" href="#"><span class="ti-download"></span> csv</a>
-										</li>
-										<li class="page-item">
-											<a class="page-link" href="#"><span class="ti-printer"></span>  print</a>
-										</li>
-										<li class="page-item">
-											<a class="page-link" href="#"><span class="ti-file"></span> PDF</a>
-										</li>
-										<li class="page-item">
-											<a class="page-link" href="#"><span class="ti-align-justify"></span> Excel</a>
-										</li>
-									</ul>
-								</nav>
-								<!-- /Export links-->
-								<button type="button" class="btn btn-danger mt-3 mb-0"><span class="ti-trash"></span> DELETE</button>
-								<button type="button" class="btn btn-primary mt-3 mb-0"><span class="ti-pencil-alt"></span> EDIT</button>
+
+								<!-- <button type="button" class="btn btn-danger mt-3 mb-0"><span class="ti-trash"></span> DELETE</button> -->
+								<!-- <button type="button" class="btn btn-primary mt-3 mb-0"><span class="ti-pencil-alt"></span> EDIT</button> -->
 							</div>
 						</div>
 					</div>

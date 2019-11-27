@@ -35,4 +35,26 @@ class DepartmentController extends Controller
            // echo $users;
          return view('Dashboard.Department.alldepartment',compact('departments'));
         }
+
+
+
+
+
+
+        //edit department
+
+        function single_department($department_id)
+        {
+          $single_department=Department::find($department_id);
+            return view ('Dashboard.Department.edit_department',compact('single_department'));
+        }
+
+
+
+        function deletedepartment($department_id)
+        {
+      Department::findOrFail($department_id)->delete();
+        return back();
+        }
+
 }

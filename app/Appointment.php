@@ -6,6 +6,22 @@ use Illuminate\Database\Eloquent\Model;
 
 class Appointment extends Model
 {
+  protected $fillable = [
+    'patient_id',
+    'department_id',
+    'doctor_id',
+    'appointment_date',
+    'token_number',
+    'problem',
+  ];
+
+
+
+
+
+
+
+
 
       public function relationBetweenPatient(){
           return $this->hasOne('App\Patient','id','patient_id');

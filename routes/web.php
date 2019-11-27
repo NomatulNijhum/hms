@@ -66,15 +66,19 @@ Route::post('/admin-save', 'TblPostController@save_admin');
 
 ////Dashboardhome
 
+////Dashboardhome
+
 Route::get('/role','RoleController@index')->name('role_index');//role
 Route::post('/role/create','RoleController@create')->name('role_create');//homepage
 Route::get('/allrole','RoleController@allrole')->name('allrole');
-
+Route::get('/allrole/{role_id}','RoleController@single_role')->name('single_role');
+Route::get('/deleterole/{role_id}','RoleController@deleterole')->name('deletepatient');
 
 ///
 
 Route::get('/array/register','RegistrationController@index')->name('register_index');//homepage
 Route::post('/register/create','RegistrationController@create')->name('register_create');
+
 
 
 ///
@@ -84,6 +88,7 @@ Route::get('/dashboard','DashboardhomeController@index');
 
 
 //Patients
+//Patients
 Route::get('/patient','PatientController@index')->name('patient');
 Route::post('/patient/create','PatientController@create')->name('patient_create');
 Route::get('/allpatient','PatientController@allpatient')->name('allpatient');
@@ -92,14 +97,28 @@ Route::get('/allpatient/{patient_id}','PatientController@single_patient')->name(
 Route::get('/deletepatient/{patient_id}','PatientController@deletepatient')->name('deletepatient');
 
 
+
+
 //Doctor
+
 Route::get('/doctor','DoctorController@index')->name('doctor');
 Route::post('/doctor/create','DoctorController@create')->name('doctor_create');
 Route::get('/alldoctor','DoctorController@alldoctor')->name('alldoctor');
 
+
+
+
+
+
 //Appointment
 
+
+
+
+
 Route::get('/appointment','AppointmentController@index')->name('appointment');
+Route::get('/appointmentview','AppointmentController@viewindex')->name('viewindex');
+
 Route::post('/appointment/create','AppointmentController@create')->name('appointment_create');
 Route::get('/allappointment','AppointmentController@allappointment')->name('allappointment');
 
@@ -115,6 +134,9 @@ Route::get('/allappointment','AppointmentController@allappointment')->name('alla
 
 Route::get('/schedule','ScheduleController@index')->name('schedule');
 Route::post('/schedule/create','ScheduleController@create')->name('schedule_create');
+Route::get('/allschedule','ScheduleController@allschedule')->name('allschedule');
+Route::get('/allschedule/{schedule_id}','ScheduleController@single_schedule')->name('single_schedule');
+Route::get('/deleteschedule/{schedule_id}','ScheduleController@deleteschedule')->name('deleteschedule');
 
 
 
@@ -139,6 +161,21 @@ Route::get('/addpayment','PaymentController@index')->name('addpayment');
 Route::get('/Birthreport','BirthreportController@index')->name('Birthreport');
 Route::post('/Birthreport/create','BirthreportController@create')->name('Birthreport_create');
 Route::get('/allBirthreport','BirthreportController@allbirthreport')->name('allbirthreport');
+Route::get('/allBirthreport/{birthreport_id}','BirthreportController@single_birthreport')->name('single_birthreport');
+Route::get('/deletebirthreport/{birthreport_id}','BirthreportController@deletebirthreport')->name('deletebirthreport');
+
+
+
+
+//PrescriptionController
+
+Route::get('/add_case_study','PrescriptionController@index')->name('add_case_study');
+Route::post('/add_case_study/create','PrescriptionController@create')->name('add_case_study_create');
+Route::get('/allcasestudy','PrescriptionController@allcasestudy')->name('allcasestudy');
+Route::get('/allcasestudy/{$prescription_id}','PrescriptionController@single_prescription')->name('single_prescription');
+Route::get('/deleteprescription/{$prescription_id}','PrescriptionController@deleteprescription')->name('deleteprescription');
+
+
 
 
 
@@ -168,9 +205,16 @@ Route::get('/addmedicine','MedicineController@index')->name('addmedicine');
 Route::post('/addmedicine/create','MedicineController@create')->name('addmedicine_create');
 Route::get('/allmedicine','MedicineController@allmedicine')->name('allmedicine');
 //
+
+
+
+//
 Route::get('/Department','DepartmentController@index')->name('Department');
 Route::post('/Department/create','DepartmentController@create')->name('Department_create');
 Route::get('/alldepartment','DepartmentController@alldepartment')->name('alldepartment');
+Route::get('/alldepartment/{department_id}','DepartmentController@single_department')->name('single_department');
+Route::get('/deletedepartment/{department_id}','DepartmentController@deletedepartment')->name('deletedepartment');
+
 
 
 
@@ -179,6 +223,7 @@ Route::get('/alldepartment','DepartmentController@alldepartment')->name('alldepa
 
 Route::get('/Notice','NoticeController@index')->name('Notice');
 Route::post('/Notice/create','NoticeController@create')->name('Notice_create');
+
 
 
 ///////

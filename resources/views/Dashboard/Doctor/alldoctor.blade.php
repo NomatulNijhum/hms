@@ -54,32 +54,33 @@ alldoctor
                             <table class="table">
                             <thead>
                               <tr>
-                                <th scope="col">#</th>
+                                <th scope="col">Id</th>
                                 <th scope="col">Doctor Name</th>
+																 <th scope="col">Department Name</th>
                                 <th scope="col">Date Of Birth</th>
-                                <th scope="col">Department Name</th>
+
                                 <th scope="col">Age</th>
                                 <th scope="col">Phone</th>
                                 <th scope="col">Email</th>
                                 <th scope="col">Gender</th>
                                 <th scope="col">Doctor Details</th>
                                 <th scope="col">Address</th>
-                                    <th scope="col">Picture</th>
-                                      <th scope="col">Doctor Details</th>
+                                <th scope="col">Picture</th>
+                                <th scope="col">Action</th>
 
                               </tr>
                             </thead>
                             <tbody>
 
-                              @foreach($doctors as $doctor)
+                      @foreach($doctors as $doctor)
 
                     <tr>
                     <th scope="row">{{ $doctor->id }}</th>
 										<td>{{ $doctor->doctor_name}}</td>
-										<td>{{ $doctor->date_of_birth }}</td>
+
 
                       <td>{{ $doctor->relationBetweenDepartment->department_name }}</td>
-
+			               	<td>{{ $doctor->date_of_birth }}</td>
 											<td>{{ $doctor->experience}}</td>
                      	<td>{{ $doctor->age}}</td>
 
@@ -89,8 +90,11 @@ alldoctor
 											<td>{{ $doctor->doctor_details }}</td>
 											<td>{{ $doctor->address }}</td>
 											<td><img width="50px" height="25px" src="{{url('images/'.$doctor->picture)}}"></td>
+											<td>
 
                     </tr>
+
+
 @endforeach
 
 
@@ -111,25 +115,9 @@ alldoctor
 
                       </div>
 								<!--Export links-->
-								<nav aria-label="Page navigation example">
-									<ul class="pagination justify-content-center export-pagination">
-										<li class="page-item">
-											<a class="page-link" href="#"><span class="ti-download"></span> csv</a>
-										</li>
-										<li class="page-item">
-											<a class="page-link" href="#"><span class="ti-printer"></span>  print</a>
-										</li>
-										<li class="page-item">
-											<a class="page-link" href="#"><span class="ti-file"></span> PDF</a>
-										</li>
-										<li class="page-item">
-											<a class="page-link" href="#"><span class="ti-align-justify"></span> Excel</a>
-										</li>
-									</ul>
-								</nav>
+
 								<!-- /Export links-->
-								<button type="button" class="btn btn-danger mt-3 mb-0"><span class="ti-trash"></span> DELETE</button>
-								<button type="button" class="btn btn-primary mt-3 mb-0"><span class="ti-pencil-alt"></span> EDIT</button>
+
 							</div>
 						</div>
 					</div>

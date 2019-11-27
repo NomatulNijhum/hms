@@ -11,25 +11,25 @@ class CreatePatientsTable extends Migration
      *
      * @return void
      */
-    public function up()
-    {
-        Schema::create('patients', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->string('Patient_Name');
-            $table->date('Date_Of_Birth');
-            $table->string('Age');
-            $table->string('Phone');
-            $table->string('Email');
-            $table->string('Gender');
-            $table->longText('Address');
-            $table->string('file');
-            $table->timestamps();
+     public function up()
+     {
+         Schema::create('patients', function (Blueprint $table) {
+             $table->bigIncrements('id');
+             $table->string('Patient_Name');
+             $table->date('Date_Of_Birth');
+             $table->string('Age');
+             $table->string('Phone');
+             $table->string('Email');
+             $table->string('Gender');
+             $table->longText('Address');
+             $table->string('Picture');
+             $table->timestamps();
 
 
 
 
-        });
-    }
+         });
+     }
 
     /**
      * Reverse the migrations.
